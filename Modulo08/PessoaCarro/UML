@@ -1,0 +1,38 @@
+@startuml
+class Carro {
+    +Carro(string marca, string cor, int ano, string placa)
+    ..
+    +{method} {Getters/Setters}
+    ..
+    +void imprime()
+    --
+    -string marca
+    -string cor
+    -int ano
+    -string placa
+}
+
+class Pessoa {
+   +Pessoa(string nome, string CPF)
+   ..
+   +{method} {Getters/Setters}
+   ..
+   +bool adicionaCarro(Carro* carro)
+   +Carro* removeCarro(string placa)
+   +void imprime();
+   --
+   -string nome
+   -string CPF
+}
+
+note right of Pessoa::Getters/Setters
+ Métodos Getters/Setters
+end note
+
+note right of Carro::Getters/Setters
+ Métodos Getters/Setters
+end note
+
+Pessoa "0..1" -- "0..3" Carro: carros
+
+@enduml

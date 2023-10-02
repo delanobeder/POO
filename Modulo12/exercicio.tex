@@ -1,0 +1,91 @@
+\documentclass[11pt]{article}
+
+\usepackage[brazil]{babel} 
+\usepackage[latin1]{inputenc} 
+\usepackage{alltt}
+\usepackage{multicol} 
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{amsmath, amssymb}
+
+\setlength{\topmargin}{-3cm} 
+\setlength{\textheight}{27.5cm}
+\setlength{\oddsidemargin}{-2cm} 
+\setlength{\evensidemargin}{-2cm}
+\setlength{\textwidth}{7.5in}
+
+\newcommand{\comb}[2]
+%%  to be used in math mode 
+{\left( \begin{array}{c} #1 \\ #2 \end{array} \right) }
+ 
+\def\ni{\noindent}
+
+\def\idc{\makebox[1.5cm]{}}
+
+\def\espaco{\makebox[5mm]{}}
+ 
+\def\ua{\uparrow}
+ 
+\def\pule{\vspace{0.2cm}} \def\pulao{\vspace{0.5cm}}
+ 
+\newcommand{\primeira}[1] {$#1^{\mbox{\scriptsize\b{a}}}$}
+ 
+\newcommand{\primeiro}[1] {#1$^{\mbox{\scriptsize\b{o}}}$}
+ 
+\begin{document}
+\lstset{language=Java}
+\lstset{frameround=fttt}
+\thispagestyle{empty}
+
+\begin{enumerate}
+
+\item Um número  complexo $z$ pode ser  escrito na forma: $z =  a + bi$,
+  onde  $a,  b \in  \mathbb{R}$,  $z  \in \mathbb{C}$  e  $i$  denota a  unidade
+  imaginária.
+
+  Defina a  classe {\sf  Complexo} que representa  números complexos.  Inclua na
+  classe um construtor único capaz de setar os atributos.
+
+\begin{itemize}
+
+\item Implemente (Sobrecarregue) o operador $+$ na classe {\sf Complexo}.
+
+  Sejam $z_1 = a + bi$ e $z_2 = c + di$. A soma $z_1 + z_2 = (a + c)
+  + (b + d)i$.
+  
+  Exemplo: $z_1 = 1 + 2i$ e $z_2 = 3 + 4i$. A soma $z_1 + z_2 = 4 + 6i$.
+
+\item Implemente (Sobrecarregue) o operador $-$ (unário) na classe {\sf Complexo}.
+
+  Seja $z = a + bi.$ A aplicação do operador $-$ (unário) em $z$ resulta $\Rightarrow -z = -a + (-b)i$
+  
+  Exemplo: $z = 1 + 2i \Rightarrow -z = -1 - 2i$.
+
+\item Implemente (Sobrecarregue) o operador $-$ na classe {\sf Complexo}.
+
+  Sejam $z_1 = a + bi$ e $z_2 = c + di$. A subtração $z_1 - z_2 = (a - c)
+  + (b - d)i$.
+  
+  Exemplo: $z_1 = 1 + 2i$ e $z_2 = 3 + 4i$. A subtração $z_1 - z_2 = -2 - 2i$.
+
+\item Implemente (Sobrecarregue) o operador $*$ na classe {\sf Complexo}.
+
+  Sejam $z_1 =  a + bi$ e  $z_2 = c +  di$. A multiplicação $z_1 * z_2 = ac  - bd +
+  (ad + bc)i$.
+
+  Exemplo: $z_1 = 1 + 2i$ e $z_2 = 3 + 4i$. A multiplicação $z_1 * z_2 = -5 + 10i$.
+
+\item Implemente (Sobrecarregue) o operador $/$ na classe {\sf Complexo}.
+
+  Sejam $z_1 =  a + bi$ e  $z_2 = c +  di$. A divisão $z_1 / z_2 = \frac{ac  + bd}{c^2 + d^2} + \frac{bc - ad}{c^2 + d^2}i$.
+
+  Exemplo: $z_1 = 1 + 2i$ e $z_2 = 3 + 4i$. A divisão $z_1 / z_2 = \frac{11}{25} + \frac{2}{25}i$.
+  
+\item Implemente  (Sobrecarregue) o operador  $<<$ na classe {\sf  Complexo}.  Esse
+  operador deve possibilitar a  impressão (no formato $a + bi$)  das informações de 
+  um número complexo.
+\end{itemize}
+
+\end{enumerate}
+
+\end{document}

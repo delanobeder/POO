@@ -1,0 +1,31 @@
+@startuml
+abstract class Animal {
+	-string nome
+	-double peso
+	+Animal(string,double)
+	+string getNome()
+	+void setNome(string)
+	+double getPeso()
+	+void setPeso(double)
+	+{abstract} string getEspecie()
+        +void imprime()
+}
+
+class Cao extends Animal {
+        -string raca
+        +Cao(string, double, string)
+        +string getRaca()
+        +void setRaca(string)
+        +string getEspecie()
+        +void imprime()
+}
+
+class Peixe extends Animal {
+        -string habitat
+        +Peixe(string, double, string)
+        +string getHabitar()
+        +void setHabitat(string)
+        +string getEspecie()
+        +void imprime()
+}
+@enduml

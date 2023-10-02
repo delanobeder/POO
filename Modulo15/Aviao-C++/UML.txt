@@ -1,0 +1,28 @@
+@startuml
+abstract class Voador {
+  +{abstract}void decolar()
+  +{abstract}void aterissar()
+}
+
+abstract class MeioDeTransporte {
+  +{abstract}void subir()
+  +{abstract}void descer()
+}
+
+class Aviao extends Voador, MeioDeTransporte{
+  +void decolar()
+  +void aterissar()
+  +void subir()
+  +void descer()
+}
+
+class Passaro extends Voador {
+  +void decolar()
+  +void aterissar()
+}
+
+class Onibus extends MeioDeTransporte{
+  +void subir()
+  +void descer()
+}
+@enduml

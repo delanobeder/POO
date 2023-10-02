@@ -1,0 +1,96 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usetheme{Madrid}
+\usecolortheme{default}
+
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title{Manipulação de Arquivos}
+\subtitle{C++}
+
+\vspace{5cm}
+
+\author{\Large{Delano M. Beder}}
+
+\date[]{\large{DC - UFSCar}}
+
+\setbeamertemplate{footline}{}
+
+\lstset{
+basicstyle = \footnotesize\ttfamily,  
+  language={C++},
+  escapechar={|}
+}
+%End of title page configuration block
+%------------------------------------------------------------
+
+
+\begin{document}
+
+%The next statement creates the title page.
+\frame{\titlepage}
+
+%---------------------------------------------------------
+%Changing visivility of the text
+\begin{frame}[fragile]
+
+\frametitle{Lendo e gravando um caracter por vez no arquivo}
+
+\begin{lstlisting}
+|\color{blue}\#include $<$fstream$>$|
+using namespace std;
+int |\color{blue}main()| {
+    
+  |\color{red}// Abertura arquivos|
+  ifstream ifs("entrada.txt");
+  ofstream ofs("saida.txt");
+
+  |\color{blue}char| carac;
+  ifs.|\color{blue}get|(carac); |\color{red}// Leitura de um caractere|
+  while (!ifs.eof()) {
+    ofs.|\color{blue}put|(carac);  |\color{red} // Escrita de um caractere|
+    ifs.|\color{blue}get|(carac); |\color{red}// Leitura de um caractere|
+  }
+
+  |\color{red}// Fecha arquivos|
+  ifs.close();
+  ofs.close();
+
+  return 0;
+}
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+
+\frametitle{Lendo e gravando uma linha por vez no arquivo}
+
+\begin{lstlisting}
+|\color{blue}\#include $<$fstream$>$|
+using namespace std;
+int |\color{blue}main()| {
+
+  |\color{red}// Abertura arquivos|
+  ifstream ifs("entrada.txt");
+  ofstream ofs("saida.txt");
+
+  |\color{blue}string| linha;
+  |\color{red}// Leitura uma linha por vez|
+  while (|\color{blue}getline|(ifs, linha)) {
+      ofs << linha << endl; |\color{red}// Escrita linha|
+  }
+
+  |\color{red}// Fecha arquivos|
+  ofs.close();
+  ifs.close();
+
+  return 0;
+}
+\end{lstlisting}
+
+\end{frame}
+
+\end{document}

@@ -1,0 +1,27 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    ifstream in;
+    in.open("entrada.txt");
+    
+    int a, b, c, maior;
+    
+    in >> a >> b >> c;
+    
+    if (a > b) {
+        maior = a;
+    } else {
+        maior = b;
+    }
+    
+    if (c > maior) {
+        maior = c;
+    }
+    
+    cout << "Maior valor e: " << maior << endl;
+    return 0;
+}
+

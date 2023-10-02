@@ -1,0 +1,28 @@
+@startuml
+class Pessoa {
+	-string nome
+	-int idade
+	+Pessoa(string,nome)
+	+string getNome()
+	+void setNome(string)
+	+int getIdade()
+	+void setIdade(int)
+	+void imprime()
+}
+
+class Aluno extends Pessoa {
+	-int RA
+	+Aluno(string,nome,int)
+	+int getRA()
+	+void setRA(int)
+	+void imprime()
+}
+
+class Professor extends Pessoa {
+	-float salario
+	+Professor(string,nome,float)
+	+float getSalario()
+	+void setSalario(float)
+	+void imprime()
+}
+@enduml
