@@ -1,7 +1,11 @@
+using System;
 
 public class Horario {
 
-    private int hora, minuto, segundo;
+    private int hora; 
+    private int minuto; 
+    
+    private int segundo;
 
     public Horario() {
         hora = 0;
@@ -44,6 +48,6 @@ public class Horario {
     }
 
     public void imprime() {
-        System.out.printf("%02d:%02d:%02d\n", hora, minuto, segundo);
+        Console.WriteLine("{0:00}:{1:00}:{2:00}", hora, minuto, segundo);
     }
 }

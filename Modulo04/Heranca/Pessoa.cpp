@@ -5,9 +5,9 @@ Pessoa::Pessoa(string nome, int idade) :
 nome(nome), idade(idade) {
 }
 
-/* string Pessoa::getNome() const {
+string Pessoa::getNome() const {
     return nome;
-}*/
+}
 
 void Pessoa::setNome(string nome) {
     this->nome = nome;
