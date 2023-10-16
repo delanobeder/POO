@@ -12,7 +12,7 @@ public:
     void setNome(string nome);
     int getIdade() const;
     void setIdade(int idade);
-    virtual void imprime() const;
+    void imprime() const;
     int compare(const Pessoa& p) const;
 private:
     string nome;

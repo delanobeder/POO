@@ -8,12 +8,12 @@ using namespace std;
 class Pessoa {
 public:
     Pessoa(string nome, int idade);
-    virtual ~Pessoa();
+    ~Pessoa();
     int getIdade() const;
     void setIdade(int idade);
     string getNome() const;
     void setNome(string nome);
-    virtual void imprime() const;
+    void imprime() const;
     int compare(const Pessoa& p) const;
     static int getContador();
 

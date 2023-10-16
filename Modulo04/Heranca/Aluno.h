@@ -8,7 +8,7 @@ public:
     Aluno(string nome, int idade, int RA);
     int getRA() const;
     void setRA(int RA);
-    virtual void imprime() const;
+    void imprime() const;
 private:
     int RA;
 };
