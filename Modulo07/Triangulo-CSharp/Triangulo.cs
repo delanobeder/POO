@@ -4,7 +4,7 @@ public class Triangulo {
 
     protected double[] lados;
 
-    public Triangulo(double lado) : this (lado, lado, lado) {
+    protected Triangulo(double lado) : this (lado, lado, lado) {
     }
 
     public Triangulo(double lado1, double lado2, double lado3) {
@@ -32,17 +32,14 @@ public class Triangulo {
     }
 
     public void imprime() {
-        Console.Write("Lados: [");
+        Console.Write("Lados: ");
         for (int i = 0; i < 3; i++) {
-            Console.Write(lados[i]);
-            if (i != 2) {
-                Console.Write(", ");
-            }
+            Console.Write("{0:0.00} ", lados[i]);
         }
-        Console.WriteLine("]");
+        Console.WriteLine();
 
-        Console.WriteLine("Perímetro: " + this.getPerimetro());
-        Console.WriteLine("Área: " + this.getArea());
+        Console.WriteLine("Perímetro: {0:0.00}", this.getPerimetro());
+        Console.WriteLine("Área: {0:0.00}", this.getArea());
     }
 
     public int compare(Triangulo t) {

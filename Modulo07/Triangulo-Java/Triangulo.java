@@ -3,7 +3,7 @@ public class Triangulo {
 
     protected double lados[];
 
-    public Triangulo(double lado) {
+    protected Triangulo(double lado) {
         this(lado, lado, lado);
     }
 
@@ -32,17 +32,14 @@ public class Triangulo {
     }
 
     public void imprime() {
-        System.out.print("Lados: [");
+        System.out.print("Lados: ");
         for (int i = 0; i < 3; i++) {
-            System.out.print(lados[i]);
-            if (i != 2) {
-                System.out.print(", ");
-            }
+            System.out.printf("%.2f ", lados[i]);
         }
-        System.out.println("]");
+        System.out.println("");
 
-        System.out.println("Perímetro: " + this.getPerimetro());
-        System.out.println("Área: " + this.getArea());
+        System.out.printf("Perímetro: %.2f\n", this.getPerimetro());
+        System.out.printf("Área: %.2f\n", this.getArea());
     }
 
     public int compare(Triangulo t) {

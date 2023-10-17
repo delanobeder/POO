@@ -27,14 +27,13 @@ double Triangulo::getArea() const {
 }
 
 void Triangulo::imprime() const {
-    cout << "Lados: [";
+    cout << fixed;
+    cout << setprecision(2);
+    cout << "Lados: ";
     for (int i = 0; i < 3; i++) {
-        cout << lados[i];
-        if (i != 2) {
-            cout << ",";
-        }
+        cout << lados[i] << " ";
     }
-    cout << "]" << endl;
+    cout << endl;
     cout << "Perímetro: " << this->getPerimetro() << endl;
     cout << "Área: " << this->getArea() << endl;
 }
