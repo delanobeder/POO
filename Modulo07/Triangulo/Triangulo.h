@@ -9,6 +9,7 @@ using namespace std;
 class Triangulo {
 public:
     Triangulo(double lado1, double lado2, double lado3);
+    ~Triangulo();
     double getPerimetro() const;
     virtual double getArea() const;
     void imprime() const;

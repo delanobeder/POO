@@ -9,6 +9,9 @@ Triangulo::Triangulo(double lado1, double lado2, double lado3) {
     lados[2] = lado3;
 }
 
+Triangulo::~Triangulo() {
+}
+
 double Triangulo::getPerimetro() const {
     double soma = 0;
     for (int i = 0; i < 3; i++) {
