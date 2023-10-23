@@ -77,6 +77,22 @@ int main() {
     // método que espera-se como parâmetro um objeto da classe mãe (Triangulo)
 
     cout << "Comparando e1 com e1: ";
+    cout << (res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior")) << endl;
+
+    // Comparando r1 (classe TriRetangulo) com r1 (classe TriRetangulo)
+    
+    res = r1.compare(r1);
+
+    // r1 => classe TriRetangulo
+    // r1 => classe TriRetangulo (parâmetro do método compare)
+    // (1) Método compare está na classe Triangulo (há herança)
+    // Ou seja, o método compare encontra-se implementado na classe mãe (Triangulo)
+    // A classe TriRetangulo herda esse método
+    // (2) r1 é da classe TriRetangulo => Substituição
+    // Ou seja, um objeto da classe filha (TriRetangulo) é utilizado em um 
+    // método que espera-se como parâmetro um objeto da classe mãe (Triangulo)
+
+    cout << "Comparando r1 com r1: ";
     cout << (res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior")) << endl << endl;
 
     // Comparando e1 (classe Equilatero) com r1 (classe TriRetangulo)

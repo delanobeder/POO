@@ -1,7 +1,7 @@
 #include "TriRetangulo.h"
 
 /*
- * cateto1 => lado[1]
+ * cateto1 => lado[0]
  * cateto2 => lado[1]
  * hipotenusa => lado[2]
  */
