@@ -9,7 +9,7 @@ public:
     virtual ~Time();
     string getNome() const;
     void setNome(string nome);
-    void adicionaJogador(int numero, Jogador* jogador);
+    void adicionaJogador(int numero, Jogador& jogador);
     void removeJogador(int numero);
     void imprime() const;
 private:

@@ -22,9 +22,9 @@ void Time::setNome(string nome) {
     this->nome = nome;
 }
 
-void Time::adicionaJogador(int numero, Jogador* jogador) {
-    elenco[numero - 1] = jogador;
-    jogador->setTime(this);
+void Time::adicionaJogador(int numero, Jogador& jogador) {
+    elenco[numero - 1] = &jogador;
+    jogador.setTime(this);
 }
 
 void Time::removeJogador(int numero) {
