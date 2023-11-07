@@ -1,18 +1,20 @@
-public class Time {
-    private String nome;
-    private Jogador elenco[];
+using System;
 
-    public Time(String nome) {
+public class Time {
+    private string nome;
+    private Jogador[] elenco;
+
+    public Time(string nome) {
         this.nome = nome;
-        System.out.println("Criando time " + nome);
+        Console.WriteLine("Criando time " + nome);
         elenco = new Jogador[22];
     }
 
-    public String getNome() {
+    public string getNome() {
         return this.nome;
     }
 
-    public void setNome(String nome) {
+    public void setNome(string nome) {
         this.nome = nome;
     }
 
@@ -27,10 +29,10 @@ public class Time {
     }
 
     public void imprime() {
-        System.out.println("Elenco do " + nome);
+        Console.WriteLine("Elenco do " + nome);
         for (int i = 0; i < 22; i++) {
             if (elenco[i] != null) {
-                System.out.print("(" + (i + 1) + ") ");
+                Console.Write("(" + (i + 1) + ") ");
                 elenco[i].imprime();
             }
         }

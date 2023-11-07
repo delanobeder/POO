@@ -7,18 +7,16 @@ using namespace poo;
 int main() {
     
     // Ponteiro para objeto (instância de classe)
-    Carro* c1;
     // Construtor que seta os valores de todos os atributos
-    c1 = new Carro("Gol", "Branca", 2001, "ABC1234");
+    Carro* c1 = new Carro("Gol", "Branca", 2001, "ABC1234");
 
     // Criação de objeto estático. 
     // Construtor que seta os valores de todos os atributos
     Carro c2("Civic", "Azul", 2020, "CAB3H23");
 
     // Ponteiro para objeto (instância de classe)
-    Carro* c3;
     // Construtor que seta os valores de todos os atributos
-    c3 = new Carro("Fusca", "Preto", 1972, "VWB6789");
+    Carro* c3 = new Carro("Fusca", "Preto", 1972, "VWB6789");
 
     // Criação de objeto estático. 
     // Construtor que seta os valores de todos os atributos
@@ -40,6 +38,7 @@ int main() {
     cout << endl << p2.adicionaCarro(&c4) << endl;
 
     // imprime as informações do p1
+
     p1->imprime();
     
     // imprime as informações do p2
@@ -51,7 +50,9 @@ int main() {
     if (c5 != NULL) {
         p2.adicionaCarro(c5);
     }
+    
     // imprime as informações do p1
+    
     p1->imprime();
     
     // imprime as informações do p2
