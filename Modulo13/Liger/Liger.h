@@ -8,7 +8,7 @@ class Liger : public Lion, public Tiger {
 public:
     Liger(int weight);
     virtual ~Liger();
-    int getWeight() const;
+    /* int getWeight() const; */
 };
 
 #endif /* LIGER_H */

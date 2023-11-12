@@ -7,6 +7,6 @@ Lion(weight), Tiger(weight) {
 Liger::~Liger() {
 }
 
-int Liger::getWeight() const {
+/* int Liger::getWeight() const {
     return Lion::getWeight();
-}
+} */
