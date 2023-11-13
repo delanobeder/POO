@@ -11,28 +11,36 @@ int Data::compare(const Data outra) const {
     }
 }
 
-bool Data::operator<(const Data &right) const {
-    return compare(right) < 0;
-}
-
-bool Data::operator<=(const Data &right) const {
-    return compare(right) <= 0;
-}
-
 bool Data::operator>(const Data &right) const {
     return compare(right) > 0;
-}
-
-bool Data::operator>=(const Data &right) const {
-    return compare(right) >= 0;
 }
 
 bool Data::operator==(const Data &right) const {
     return compare(right) == 0;
 }
 
+bool Data::operator>=(const Data &right) const {
+    return compare(right) >= 0;
+    // a >= b se (a > b) ou (a == b)
+    // return (*this > right)  || (*this == right);
+}
+
+bool Data::operator<(const Data &right) const {
+    return compare(right) < 0;
+    // se a < b se !(a > b) && (a != b)
+    // return !(*this > right) && (*this != right);
+}
+
+bool Data::operator<=(const Data &right) const {
+    return compare(right) <= 0;
+    // se a <= b se !(a > b)
+    // return !(*this > right);
+}
+
 bool Data::operator!=(const Data &right) const {
     return compare(right) != 0;
+    // se a != b se !(a == b)
+    // return !(*this == right);
 }
 
 void Data::incrementa() {
@@ -79,20 +87,19 @@ Data &Data::operator++() {
 
 Data Data::operator++(int) {
     Data old = *this; // cópia do valor antigo
-    operator++();  // executa o operador prefix
+    ++(*this);  // executa o operador prefix
+                // Poderia ser invocado assim tambem => operator++() 
     return old;    // retorna o valor antigo
 }
 
-ostream &operator<<(ostream &os, const Data &obj)
-{
+ostream &operator<<(ostream &os, const Data &obj) {
     os << setfill('0') << setw(2) << obj.dia << "/";
     os << setfill('0') << setw(2) << obj.mes << "/";
     os << setfill('0') << setw(4) << obj.ano;
     return os;
 }
 
-istream &operator>>(istream &is, Data &obj)
-{
+istream &operator>>(istream &is, Data &obj) {
     char c; // usado para ignorar a barra "/"
     is >> obj.dia >> c >> obj.mes >> c >> obj.ano;
     return is;

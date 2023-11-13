@@ -7,14 +7,16 @@ real(real), imaginaria(imaginaria) {
 Complexo::~Complexo() {
 }
 
+void Complexo::imprime() {
+    cout << *this << endl;
+}
+
+// operadores aritméticos binários
+
 Complexo Complexo::operator+(const Complexo& obj) const {
     double r = this->real + obj.real;
     double i = this->imaginaria + obj.imaginaria;
     return Complexo(r, i);
-}
-
-Complexo Complexo::operator-() const {
-    return Complexo(-this->real, -this->imaginaria);
 }
 
 Complexo Complexo::operator-(const Complexo& obj) const {
@@ -50,6 +52,14 @@ Complexo Complexo::operator/(const Complexo& obj) const {
     return Complexo(r, i);
 }
 
+// operador aritmético unário
+
+Complexo Complexo::operator-() const {
+    return Complexo(-this->real, -this->imaginaria);
+}
+
+// função friend (para impressão via cout)
+
 ostream& operator<<(ostream& os, const Complexo& obj) {
     /* bool flag = obj.imaginaria >= 0;
     os << obj.real << (flag ? " + " : " - ");
@@ -62,4 +72,3 @@ ostream& operator<<(ostream& os, const Complexo& obj) {
     }
     return os;
 }
-
