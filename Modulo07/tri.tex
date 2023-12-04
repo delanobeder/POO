@@ -1,0 +1,122 @@
+\documentclass[11pt]{article}
+
+\usepackage[brazil]{babel} 
+\usepackage[latin1]{inputenc} 
+\usepackage{alltt}
+\usepackage{multicol} 
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{amsmath, amssymb}
+\usepackage{booktabs}
+\usepackage{tcolorbox}
+
+\setlength{\topmargin}{-2.5cm}
+\setlength{\textheight}{26.5cm}
+\setlength{\oddsidemargin}{-2cm} 
+\setlength{\evensidemargin}{-2cm}
+\setlength{\textwidth}{7.5in}
+
+\newcommand{\comb}[2]
+%%  to be used in math mode 
+{\left( \begin{array}{c} #1 \\ #2 \end{array} \right) }
+ 
+\def\ni{\noindent}
+
+\def\idc{\makebox[1.5cm]{}}
+
+\def\espaco{\makebox[5mm]{}}
+ 
+\def\ua{\uparrow}
+ 
+\def\pule{\vspace{0.2cm}} \def\pulao{\vspace{0.5cm}}
+ 
+\newcommand{\primeira}[1] {$#1^{\mbox{\scriptsize\b{a}}}$}
+ 
+\newcommand{\primeiro}[1] {#1$^{\mbox{\scriptsize\b{o}}}$}
+ 
+\begin{document}
+\lstset{language=Java}
+\lstset{frameround=fttt}
+\thispagestyle{empty}
+\begin{center}
+
+\hfill {\small Departamento de Computação -- Universidade Federal de São Carlos} \\
+\hspace{1cm}\\
+
+  \textbf{\large 1001507 -- PROGRAMAÇÃO ORIENTADA A OBJETOS}
+
+  \hspace{1cm}\\
+  
+  \textsc{Professor: Delano Medeiros Beder}
+
+\end{center}
+
+\noindent Essa atividade consiste em implementar (em C++) as classes conforme as
+instruções fornecidas nas questões abaixo.  Deve-se utilizar apenas os conceitos
+apresentados  em aula  e  seguir as  boas práticas  de  programação orientada  a
+objetos.
+
+\begin{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%   Q U E S T A O 2=1
+%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item  Considere  a classe  {\sf  Triangulo}  que  representa triângulos  e  que
+  encontra-se parcialmente  implementada.  Solicita-se nessa questão,  a correta
+  implementação das funcionalidades listadas abaixo:
+
+\begin{enumerate}
+
+\item Inclua  na classe um  construtor único  capaz de inicializar  os atributos
+  privados.
+
+\item Implemente o método {\sf double getPerimetro()} que retorna o perímetro do
+  triângulo (soma dos 3 lados)
+
+\item  Implemente  o  método  {\sf  double getArea()}  que  retorna  a  área  do
+  triângulo. Considerando um triângulo  de lados a, b, e c,  a área do triângulo
+  $A$ é calculada por:
+
+\[ A = \sqrt{p \cdot (p-a) \cdot (p-b) \cdot (p-c)} \]
+
+Sendo que $p$ é o semiperímetro (metade do perímetro) do triângulo:
+
+\item  Implemente   (Sobrecarregue)  os  operadores  relacionais   [critério  de
+  comparação -- área do triângulo]
+
+\item  Implemente (Sobrecarregue)  o operador  $<<$ na  classe {\sf  Triangulo}.
+  Esse operador deve possibilitar a impressão das informações de um triângulo.
+  
+\end{enumerate}
+
+\begin{tcolorbox}
+\begin{quote}
+\begin{scriptsize}
+\begin{alltt}
+class Triangulo \{
+private:
+   double a, b, c; // lados do triangulo
+public:
+    // Construtor único [a ser implementado] (a)
+    // Métodos getters/setters - não serão implementados
+    double getPerimetro() \{ A ser implmentado (b) \}
+    virtual double getArea() \{ A ser implementado (c) \}
+    bool operator>(const Triangulo& obj) const \{ A ser implementado (d) \}
+    bool operator>=(const Triangulo& obj) const \{ A ser implementado (d) \}
+    bool operator<(const Triangulo& obj) const \{ A ser implementado (d) \}
+    bool operator<=(const Triangulo& obj) const \{ A ser implementado (d) \}
+    bool operator==(const Triangulo& obj) const \{ A ser implementado (d) \}
+    bool operator!=(const Triangulo& obj) const \{ A ser implementado (d) \}
+    friend ostream& operator<< (ostream& os, const Triangulo& triangulo) \{ A ser implementado (e) \}
+\};    
+\end{alltt}
+\end{scriptsize}
+\end{quote}
+\end{tcolorbox}
+
+\end{enumerate}
+
+\end{document}
