@@ -13,8 +13,8 @@ public:
     void setIdade(int idade);
     string getNome() const;
     void setNome(string nome);
-    void adiciona(AnimalDomestico* a);
-    void remove(string nome);
+    bool adiciona(AnimalDomestico* a);
+    bool remove(string nome);
     void imprime();
 private:
     string nome;

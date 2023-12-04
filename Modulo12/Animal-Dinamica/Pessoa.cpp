@@ -30,12 +30,13 @@ void Pessoa::setIdade(int idade) {
     this->idade = idade;
 }
 
-void Pessoa::adiciona(AnimalDomestico* a) {
+bool Pessoa::adiciona(AnimalDomestico* a) {
     if (qtde == max) {
         realoca(max + 5);
     }
     a->setDono(this);
     animais[qtde++] = a;
+    return true;
 }
 
 void Pessoa::realoca(int tam) {
@@ -48,7 +49,7 @@ void Pessoa::realoca(int tam) {
     animais = aux;
 }
 
-void Pessoa::remove(string nome) {
+bool Pessoa::remove(string nome) {
     bool found = false;
     int i = 0;
 
@@ -75,6 +76,7 @@ void Pessoa::remove(string nome) {
             realoca(max - 5);
         }
     }
+    return found;
 }
 
 void Pessoa::imprime() {
