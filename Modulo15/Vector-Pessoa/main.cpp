@@ -26,7 +26,7 @@ int main() {
     p2->setCPF(12345);
     p3.setCPF(97531);
 
-    for (int i = 0; i < 3; i++) {
+    for (long unsigned int i = 0; i < 3; i++) {
         pessoas[i]->imprime();
         cout << endl;
     }
@@ -35,7 +35,16 @@ int main() {
 
     sort(pessoas.begin(), pessoas.end(), Pessoa::comparaNome);
 
-    for (int i = 0; i < 3; i++) {
+    for (long unsigned int i = 0; i < 3; i++) {
+        pessoas[i]->imprime();
+        cout << endl;
+    }
+
+    cout << "----------------------------- " << endl << endl;
+
+    sort(pessoas.begin(), pessoas.end(), Pessoa::comparaCPF);
+
+    for (long unsigned int i = 0; i < 3; i++) {
         pessoas[i]->imprime();
         cout << endl;
     }

@@ -33,7 +33,7 @@ void remove(vector<int>& v, int el) {
 bool encontra(vector<int> v, int el) {
 
     unsigned int i = 0;
-    while (v[i] != el && i < v.size()) {
+    while (i < v.size() && v[i] != el) {
         i++;
     }
 
@@ -63,12 +63,17 @@ int main() {
 
     srand(time(NULL));
 
-    /* vector<int> vetor;
-     * 
+    /* 
+    vector<int> vetor;
+ 
     for (int i = 0; i < 50; i++) {
-        int segredo = rand() % 50 + 1;
+        int segredo;
+        do {
+            segredo = rand() % 50 + 1;
+        } while (encontra(vetor, segredo));
         vetor.push_back(segredo);
-    } */
+    }
+    */
 
     cout << endl;
 
