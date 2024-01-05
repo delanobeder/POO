@@ -1,6 +1,6 @@
 #include "Funcionario.h"
 
-Funcionario::Funcionario(int CPF, string nome) :
+Funcionario::Funcionario(string CPF, string nome) :
 CPF(CPF), nome(nome) {
 }
 

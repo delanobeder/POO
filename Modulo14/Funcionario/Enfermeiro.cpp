@@ -1,6 +1,6 @@
 #include "Enfermeiro.h"
 
-Enfermeiro::Enfermeiro(int CPF, string nome, int CRE) :
+Enfermeiro::Enfermeiro(string CPF, string nome, int CRE) :
 Funcionario(CPF, nome), CRE(CRE) {
 }
 

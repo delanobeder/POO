@@ -1,6 +1,6 @@
 #include "Medico.h"
 
-Medico::Medico(int CPF, string nome, string especialidade) :
+Medico::Medico(string CPF, string nome, string especialidade) :
 Funcionario(CPF, nome), especialidade(especialidade) {
 }
 

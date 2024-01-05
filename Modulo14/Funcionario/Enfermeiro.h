@@ -5,7 +5,7 @@
 
 class Enfermeiro : public Funcionario{
 public:
-    Enfermeiro(int CPF, string nome, int CRE);
+    Enfermeiro(string CPF, string nome, int CRE);
     virtual ~Enfermeiro();
     virtual string getProfissao() const;
     virtual void imprime() const;
