@@ -7,6 +7,14 @@ Funcionario(CPF, nome), CRE(CRE) {
 Enfermeiro::~Enfermeiro() {
 }
 
+int Enfermeiro::getCRE() const {
+    return CRE;
+}
+
+void Enfermeiro::setCRE(int CRE) {
+    this->CRE = CRE;
+}
+
 string Enfermeiro::getProfissao() const {
     return "Enfermeiro";
 }

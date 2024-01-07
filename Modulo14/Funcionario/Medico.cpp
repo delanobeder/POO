@@ -8,6 +8,14 @@ Medico::~Medico() {
 
 }
 
+string Medico::getEspecialidade() const {
+    return especialidade;
+}
+
+void Medico::setEspecialidade(string especialidade) {
+    this->especialidade = especialidade;
+}
+
 string Medico::getProfissao() const {
     return "Médico";
 }
