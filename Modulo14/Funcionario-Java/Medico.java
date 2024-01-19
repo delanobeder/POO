@@ -12,6 +12,10 @@ public class Medico extends Funcionario {
         return "Medico";
     }
 
+    public String getEspecialidade() {
+        return especialidade;
+    }
+
     public void imprime() {
         super.imprime();
         System.out.println("Especialidade: " + especialidade);

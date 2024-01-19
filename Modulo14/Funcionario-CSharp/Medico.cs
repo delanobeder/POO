@@ -12,6 +12,10 @@ public class Medico : Funcionario {
         return "Medico";
     }
 
+    public string getEspecialidade() {
+        return especialidade;
+    }
+
     new public void imprime() {
         base.imprime();
         Console.WriteLine("Especialidade: {0}", this.especialidade);

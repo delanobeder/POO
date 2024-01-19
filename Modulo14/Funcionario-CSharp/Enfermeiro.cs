@@ -12,6 +12,10 @@ public class Enfermeiro : Funcionario{
         return "Enfermeiro";
     }
 
+    public int getCRE() {
+        return CRE;
+    }
+
     new public void imprime() {
         base.imprime();
         Console.WriteLine("CRE: {0}", this.CRE);

@@ -12,6 +12,10 @@ public class Enfermeiro extends Funcionario{
         return "Enfermeiro";
     }
 
+    public int getCRE() {
+        return CRE;
+    }
+
     public void imprime() {
         super.imprime();
         System.out.println("CRE: " + CRE);

@@ -8,6 +8,8 @@ using namespace std;
 class Cadastro {
 private:
     string fileName;
+    bool salva(fstream& fs, Retangulo& r);
+    bool recupera(fstream& fs, Retangulo& r);
 public:
     Cadastro(string fileName);
     void grava();

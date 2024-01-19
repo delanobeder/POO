@@ -8,18 +8,35 @@ using namespace std;
 
 Cadastro::Cadastro(string fileName) : fileName(fileName) {}
 
+bool Cadastro::salva(fstream& fs, Retangulo& r) {
+    bool ok = fs.is_open();
+    if (ok) {
+        fs.write(reinterpret_cast<char*> (&r), sizeof (Retangulo));
+    }
+    return ok;
+}
+
+bool Cadastro::recupera(fstream& fs, Retangulo& r) {
+    bool ok = fs.is_open();
+    if (ok) {
+        fs.read(reinterpret_cast<char*> (&r), sizeof (Retangulo));
+        ok = fs.good();
+    }
+    return ok;
+}
+
 void Cadastro::grava() {
 
     Retangulo* r;
     double x, y;
 
-    ofstream saida(fileName, ios::binary);
+    fstream saida(fileName, ios::out | ios::binary);
 
     for (int i = 0; i < 3; i++) {
         cout << "\nDigite base e altura: ";
         cin >> x >> y;
         r = new Retangulo(x, y);
-        saida.write(reinterpret_cast<char*> (r), sizeof (Retangulo));
+        this->salva(saida, *r);
         delete r;
     }
 
@@ -30,12 +47,10 @@ void Cadastro::imprime() {
 
     Retangulo* r = new Retangulo();
 
-    ifstream entrada(fileName, ios::binary);
+    fstream entrada(fileName, ios::in | ios::binary);
 
-    entrada.read(reinterpret_cast<char*> (r), sizeof (Retangulo));
-    while (entrada.good()) {
+    while (this->recupera(entrada, *r)) {
         r->imprime();
-        entrada.read(reinterpret_cast<char*> (r), sizeof (Retangulo));
     }
 
     delete r;
@@ -47,12 +62,11 @@ void Cadastro::imprime(int pos) {
 
     Retangulo r;
 
-    ifstream entrada(fileName, ios::binary);
+    fstream entrada(fileName, ios::in | ios::binary);
 
     entrada.seekg((pos - 1) * sizeof (Retangulo));
-    entrada.read(reinterpret_cast<char*> (&r), sizeof (Retangulo));
 
-    if (entrada.good()) {
+    if (this->recupera(entrada, r)) {
         r.imprime();
     } else {
         cout << "Retangulo não encontrado" << endl;
@@ -69,15 +83,14 @@ void Cadastro::altera(int pos) {
     fstream arquivo(fileName, ios::in | ios::out | ios::binary);
 
     arquivo.seekg((pos - 1) * sizeof (Retangulo)); // segundo parametro opcional (inicio)
-    arquivo.read(reinterpret_cast<char*> (&r), sizeof (Retangulo));
 
-    if (arquivo.good()) {
+    if (this->recupera(arquivo, r)) {
         r.imprime();
         cout << "Digite base e altura: ";
         cin >> x >> y;
         Retangulo* aux = new Retangulo(x, y);
         arquivo.seekp(-sizeof(Retangulo),ios_base::cur);
-        arquivo.write(reinterpret_cast<char*> (aux), sizeof (Retangulo));
+        this->salva(arquivo, *aux);
         delete aux;
     } else {
         cout << "Retangulo não encontrado" << endl;
@@ -92,22 +105,20 @@ void Cadastro::ordenaArquivo() {
 
     vector<Retangulo> retangulos;
     
-    ifstream entrada(fileName, ios::binary);
+    fstream entrada(fileName, ios::in | ios::binary);
 
-    entrada.read(reinterpret_cast<char*> (&r), sizeof (Retangulo));
-    while (entrada.good()) {
+    while (this->recupera(entrada, r)) {
         retangulos.push_back(r);
-        entrada.read(reinterpret_cast<char*> (&r), sizeof (Retangulo));
     }
 
     entrada.close();
 
     sort(retangulos.begin(), retangulos.end(), Retangulo::compara);
 
-    ofstream ordenado(fileName, ios::binary);
+    fstream ordenado(fileName, ios::out | ios::binary);
 
     for (long unsigned int i = 0; i < retangulos.size(); i++) {
-        ordenado.write(reinterpret_cast<char*> (&retangulos[i]), sizeof (Retangulo));
+        this->salva(ordenado, retangulos[i]);
     }
 
     ordenado.close();
