@@ -11,6 +11,6 @@ run: $(EXECUTABLE)
 	@./$(EXECUTABLE)
 
 $(EXECUTABLE): *.c
-	@s$(CXX) $(CXX_FLAGS) -I. $^ -o $@ $(LIBRARIES)
+	@$(CXX) $(CXX_FLAGS) -I. $^ -o $@ $(LIBRARIES)
 
 

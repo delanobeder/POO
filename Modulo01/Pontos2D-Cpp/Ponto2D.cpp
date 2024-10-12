@@ -13,7 +13,7 @@ Ponto2D::~Ponto2D() {
 float Ponto2D::distancia(const Ponto2D p) const {
     float dx = this->x - p.x;
     float dy = this->y - p.y;
-    return sqrt(dx * dx + dy * dy);
+    return ((float)sqrt(dx * dx + dy * dy));
 }
 
 void Ponto2D::moveX(float dx) {
@@ -25,5 +25,5 @@ void Ponto2D::moveY(float dy) {
 }
 
 void Ponto2D::imprime() {
-    printf("(%5.2f, %5.2f)\n", this->x, this->y);
+    printf("(%.2f, %.2f)\n", this->x, this->y);
 }
