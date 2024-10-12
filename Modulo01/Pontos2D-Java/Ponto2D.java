@@ -11,10 +11,10 @@ public class Ponto2D {
 
     // método da classe
 
-    public double distancia(final Ponto2D p) {
+    public float distancia(final Ponto2D p) {
         double dx = x - p.x;
         double dy = y - p.y;
-        return Math.sqrt(dx * dx + dy * dy);
+        return ((float)Math.sqrt(dx * dx + dy * dy));
     }
 
     public void moveX(float dx) {
@@ -26,6 +26,6 @@ public class Ponto2D {
     }
 
     public void imprime() {
-        System.out.printf("(%5.2f, %5.2f)\n", this.x, this.y);
+        System.out.printf("(%.2f, %.2f)\n", this.x, this.y);
     }
 }
