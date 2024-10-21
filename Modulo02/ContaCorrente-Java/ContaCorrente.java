@@ -37,6 +37,7 @@ public class ContaCorrente {
     }
 
     public void imprime() {
-        System.out.println("Numero: " + numero + ", saldo: " + saldo);
+        System.out.println("Numero: " + numero);
+        System.out.println("Saldo: " + saldo);
     }
 }

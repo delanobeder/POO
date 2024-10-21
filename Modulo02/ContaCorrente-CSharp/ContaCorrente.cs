@@ -38,7 +38,8 @@ public class ContaCorrente {
         return ok;
     }
 
-    public void imprime() {
-        Console.WriteLine("Numero: {0}, saldo: {1:0.00}", this.numero, this.saldo);
+    virtual public void imprime() {
+        Console.WriteLine("Numero: {0}", this.numero);
+        Console.WriteLine("Saldo: {0:0.00}", this.saldo);
     }
 }

@@ -6,8 +6,10 @@ public:
     ContaCorrente(int numero, double saldo = 0); // construtor 
     virtual ~ContaCorrente(); // destrutor
     // métodos da classe
+    int getNumero() const;
+    double getSaldo() const;
     bool retirada(double valor);
-    void deposito(double valor);
+    bool deposito(double valor);
     bool transferencia(ContaCorrente &outra, double valor);
     void imprime() const;
 private: // atributos da classe
