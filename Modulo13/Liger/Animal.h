@@ -4,11 +4,11 @@
 
 class Animal {
 public:
-    Animal(int weight);
+    Animal(float weight);
     virtual ~Animal();
-    virtual int getWeight() const;
+    virtual float getWeight() const;
 private:
-    int weight;
+    float weight;
 };
 
 #endif /* ANIMAL_H */

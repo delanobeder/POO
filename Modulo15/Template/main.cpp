@@ -1,7 +1,6 @@
 #include <iostream>
 
 #include "Calculadora.h"
-#include "Fracao.h"
 using namespace std;
 
 template <class X> 
@@ -40,11 +39,6 @@ int main() {
     cFloat.imprime();
 
     cout << endl;
-    
-    Fracao f1(1, 3);
-    Fracao f2(10, 5);
-    Calculadora<Fracao> cFracao(f1, f2);
-    cFracao.imprime();
 
     return 0;
 }

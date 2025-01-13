@@ -1,12 +1,12 @@
 #include "Liger.h"
 
-Liger::Liger(int weight) :
+Liger::Liger(float weight) :
 Lion(weight), Tiger(weight) {
 }
 
 Liger::~Liger() {
 }
 
-/* int Liger::getWeight() const {
+/* float Liger::getWeight() const {
     return Lion::getWeight();
 } */

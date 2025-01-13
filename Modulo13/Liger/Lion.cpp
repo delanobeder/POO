@@ -1,13 +1,13 @@
 #include "Lion.h"
 
-Lion::Lion(int weight) :
+Lion::Lion(float weight) :
 Animal(weight) {
 }
 
 Lion::~Lion() {
 }
 
-int Lion::getWeight() const {
+float Lion::getWeight() const {
     return Animal::getWeight() * 2;
 }
 

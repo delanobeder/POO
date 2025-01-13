@@ -6,9 +6,9 @@
 
 class Liger : public Lion, public Tiger {
 public:
-    Liger(int weight);
+    Liger(float weight);
     virtual ~Liger();
-    /* int getWeight() const; */
+    /* float getWeight() const; */
 };
 
 #endif /* LIGER_H */

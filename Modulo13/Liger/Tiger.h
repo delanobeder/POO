@@ -5,9 +5,9 @@
 
 class Tiger : public Animal {
 public:
-    Tiger(int weight);
+    Tiger(float weight);
     virtual ~Tiger();
-    int getWeight() const;
+    float getWeight() const;
 };
 
 #endif /* TIGER_H */

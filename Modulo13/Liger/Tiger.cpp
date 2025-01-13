@@ -1,12 +1,12 @@
 #include "Tiger.h"
 
-Tiger::Tiger(int weight) :
+Tiger::Tiger(float weight) :
 Animal(weight) {
 }
 
 Tiger::~Tiger() {
 }
 
-int Tiger::getWeight() const {
+float Tiger::getWeight() const {
     return Animal::getWeight() * 3;
 }
