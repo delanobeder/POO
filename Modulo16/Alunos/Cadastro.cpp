@@ -96,15 +96,15 @@ void Cadastro::imprimePos(int pos) {
     ifstream ifs(nomeArquivo);
 
     if (ifs.is_open()) {
-        contador = 0;
+        contador = 1;
         ifs >> line;
-        while (ifs.good() && contador < pos) {
-            atualiza(aluno, line);
+        while (ifs.good() && contador < pos) {  
             contador++;
             ifs >> line;
         }
 
-        if (contador == pos) {
+        if (ifs.good()) {
+            atualiza(aluno, line);
             aluno.imprime();
         } else {
             cout << "Aluno não encontrado" << endl;
