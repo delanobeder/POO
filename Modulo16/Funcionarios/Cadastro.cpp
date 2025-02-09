@@ -30,19 +30,19 @@ void Cadastro::grava() {
         // Escrevendo o tipo de funcionario (ENFERMEIRO ou MEDICO)
 
         tipo = funcionarios[i]->getProfissao();
-        ofs << tipo << "#";
+        ofs << tipo << Cadastro::delimitador;
 
         // Escrevendo o CPF
 
-        ofs << funcionarios[i]->getCPF() << "#";
+        ofs << funcionarios[i]->getCPF() << Cadastro::delimitador;
 
         // Escrevendo o nome
 
-        ofs << funcionarios[i]->getNome() << "#";
+        ofs << funcionarios[i]->getNome() << Cadastro::delimitador;
         
         // Escrevendo o salario
 
-        ofs << funcionarios[i]->getSalario() << "#";
+        ofs << funcionarios[i]->getSalario() << Cadastro::delimitador;
 
         // Escreve as caracteristicas especificas Funcionário
         // (atributos da classe Enfermeiro ou Medico)
@@ -53,7 +53,7 @@ void Cadastro::grava() {
                 // Escrevendo o CRE
 
                 e1 = dynamic_cast<Enfermeiro *>(funcionarios[i]);
-                ofs << e1->getCRE() << "#";
+                ofs << e1->getCRE() << Cadastro::delimitador;
 
                 break;
             }
@@ -62,7 +62,7 @@ void Cadastro::grava() {
                 // Escrevendo a especialidade
 
                 m1 = dynamic_cast<Medico *>(funcionarios[i]);
-                ofs << m1->getEspecialidade() << "#";
+                ofs << m1->getEspecialidade() << Cadastro::delimitador;
 
              break;
             }
@@ -88,21 +88,21 @@ Funcionario* Cadastro::leitura(string line) {
 
     // Recupera o tipo
 
-    getline(ss, column, '#');
+    getline(ss, column, Cadastro::delimitador);
     tipo = stoi(column);
 
     // Recupera o CPF
 
-    getline(ss, column, '#');
+    getline(ss, column, Cadastro::delimitador);
     CPF = stoi(column);
 
     // Recupera o nome
 
-    getline(ss, nome, '#');
+    getline(ss, nome, Cadastro::delimitador);
 
     // Recupera o salário
 
-    getline(ss, column, '#');
+    getline(ss, column, Cadastro::delimitador);
     salario = stoi(column);
 
     switch (tipo) {
@@ -110,7 +110,7 @@ Funcionario* Cadastro::leitura(string line) {
 
         // Recuperando o CRE
 
-        getline(ss, column, '#');
+        getline(ss, column, Cadastro::delimitador);
         CRE = stoi(column);
 
         f = new Enfermeiro(CPF, nome, salario, CRE);
@@ -120,7 +120,7 @@ Funcionario* Cadastro::leitura(string line) {
 
         // Recuperando a especialidade
 
-        getline(ss, especialidade, '#');
+        getline(ss, especialidade, Cadastro::delimitador);
 
         f = new Medico(CPF, nome, salario, especialidade);
 

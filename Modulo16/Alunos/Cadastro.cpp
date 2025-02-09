@@ -18,7 +18,18 @@ void Cadastro::grava(int nro) {
         cout << "Digite RA, NP e NT: ";
         cout << endl;
         cin >> RA >> NP >> NT;
-        ofs << RA << "#" << NP << "#" << NT << endl;
+        
+        // Gravando RA
+
+        ofs << RA << Cadastro::delimitador;
+
+        // Escrevendo NP
+
+        ofs << NP << Cadastro::delimitador; 
+        
+        // Escrevendo NT
+
+        ofs << NT << endl;
     }
 
     ofs.close();
@@ -30,15 +41,15 @@ void Cadastro::atualiza(Aluno &aluno, string line) {
     string column;
 
     // Recupera RA
-    getline(ss, column, '#');
+    getline(ss, column, Cadastro::delimitador);
     aluno.RA = stoi(column);
 
     // Recupera NP
-    getline(ss, column, '#');
+    getline(ss, column, Cadastro::delimitador);
     aluno.NP = stod(column);
 
     // Recupera NT
-    getline(ss, column, '#');
+    getline(ss, column, Cadastro::delimitador);
     aluno.NT = stod(column);
 }
 

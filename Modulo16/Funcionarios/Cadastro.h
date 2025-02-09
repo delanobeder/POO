@@ -23,6 +23,7 @@ private:
 
     string fileName;
     vector<Funcionario *> funcionarios;
+    static const char delimitador = '#';
 };
 
 #endif /* CADASTRO_H */

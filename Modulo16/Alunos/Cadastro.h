@@ -23,6 +23,8 @@ public:
     static char opcao();
 private:
     string nomeArquivo;
+    const static char delimitador = '#';
+
     void leitura(vector<Aluno>&);
     void atualiza(Aluno& a, string line);
 };
