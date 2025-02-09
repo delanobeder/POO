@@ -3,6 +3,8 @@
 #include "Medico.h"
 #include <algorithm>
 #include <fstream>
+#include <sstream>
+#include <iostream>
 using namespace std;
 
 Cadastro::Cadastro(string fileName) : fileName(fileName) {
@@ -17,144 +19,138 @@ Cadastro::~Cadastro() {
 
 void Cadastro::grava() {
 
-    int CPF, CRE, tipo, tam;
-    string nome, especialidade;
-    double salario;
+    int tipo;
     Enfermeiro *e1;
     Medico *m1;
 
-    ofstream saida(fileName, ios::binary);
+    ofstream ofs(fileName);
 
     for (long unsigned int i = 0; i < funcionarios.size(); i++)  {
 
         // Escrevendo o tipo de funcionario (ENFERMEIRO ou MEDICO)
 
         tipo = funcionarios[i]->getProfissao();
-        saida.write(reinterpret_cast<char *>(&tipo), sizeof(tipo));
+        ofs << tipo << "#";
 
         // Escrevendo o CPF
 
-        CPF = funcionarios[i]->getCPF();
-        saida.write(reinterpret_cast<char *>(&CPF), sizeof(CPF));
+        ofs << funcionarios[i]->getCPF() << "#";
 
         // Escrevendo o nome
 
-        nome = funcionarios[i]->getNome();
-        tam = nome.size();
-
-        // Escrevendo o tamanho da string (nome)
-        saida.write(reinterpret_cast<char *>(&tam), sizeof(tam));
-
-        // Escrevendo os caracteres da string (nome)
-        saida.write(reinterpret_cast<char *>(&nome[0]), tam);
-
+        ofs << funcionarios[i]->getNome() << "#";
+        
         // Escrevendo o salario
-        salario = funcionarios[i]->getSalario();
-        saida.write(reinterpret_cast<char *>(&salario), sizeof(salario));
+
+        ofs << funcionarios[i]->getSalario() << "#";
 
         // Escreve as caracteristicas especificas Funcionário
         // (atributos da classe Enfermeiro ou Medico)
 
         switch (tipo) {
             case ENFERMEIRO: {
+                
                 // Escrevendo o CRE
 
                 e1 = dynamic_cast<Enfermeiro *>(funcionarios[i]);
-                CRE = e1->getCRE();
-                saida.write(reinterpret_cast<char *>(&CRE), sizeof(CRE));
+                ofs << e1->getCRE() << "#";
 
                 break;
             }
             case MEDICO: {
+                
                 // Escrevendo a especialidade
 
                 m1 = dynamic_cast<Medico *>(funcionarios[i]);
-                especialidade = m1->getEspecialidade();
-                tam = especialidade.size();
-
-                // Escrevendo o tamanho da string (especialidade)
-                saida.write(reinterpret_cast<char *>(&tam), sizeof(tam));
-
-                // Escrevendo os caracteres da string (especialidade)
-                saida.write(reinterpret_cast<char *>(&especialidade[0]), tam);
+                ofs << m1->getEspecialidade() << "#";
 
              break;
             }
         }
+        ofs << endl;
     }
 
-    saida.close();
+    ofs.close();
+}
+
+Funcionario* Cadastro::leitura(string line) {
+
+    Funcionario* f;
+    stringstream ss(line);
+    string column;
+
+    int tipo;
+    int CPF;
+    string nome;
+    double salario;
+    int CRE;
+    string especialidade;
+
+    // Recupera o tipo
+
+    getline(ss, column, '#');
+    tipo = stoi(column);
+
+    // Recupera o CPF
+
+    getline(ss, column, '#');
+    CPF = stoi(column);
+
+    // Recupera o nome
+
+    getline(ss, nome, '#');
+
+    // Recupera o salário
+
+    getline(ss, column, '#');
+    salario = stoi(column);
+
+    switch (tipo) {
+    case ENFERMEIRO: {
+
+        // Recuperando o CRE
+
+        getline(ss, column, '#');
+        CRE = stoi(column);
+
+        f = new Enfermeiro(CPF, nome, salario, CRE);
+        break;
+    }
+    case MEDICO: {
+
+        // Recuperando a especialidade
+
+        getline(ss, especialidade, '#');
+
+        f = new Medico(CPF, nome, salario, especialidade);
+
+        break;
+    }
+    }
+
+    return f;
 }
 
 void Cadastro::recupera() {
 
-    int CPF, CRE, tipo, tam;
-    double salario;
-    string nome, especialidade;
+    string line;
 
-    ifstream entrada(fileName, ios::binary);
+    ifstream ifs(fileName);
     
-    if (entrada.is_open()) {
+    if (ifs.is_open()) {
 
         funcionarios.clear();
+        
+        ifs >> line;
 
-        // Lendo o tipo
-
-        entrada.read(reinterpret_cast<char *>(&tipo), sizeof(tipo));
-
-        while (entrada.good()) {
-
-            // Lendo o CPF
-
-            entrada.read(reinterpret_cast<char *>(&CPF), sizeof(CPF));
-
-            // Lendo o nome
-
-            // Lendo o tamanho da string (nome)
-            entrada.read(reinterpret_cast<char *>(&tam), sizeof(tam));
-            nome.resize(tam);
-
-            // Lendo os caracteres da string (nome)
-            entrada.read(reinterpret_cast<char *>(&nome[0]), tam);
-
-            // Lendo o salário
-
-            entrada.read(reinterpret_cast<char *>(&salario), sizeof(salario));
-
-            // Lendo as caracteristicas especificas Funcionário
-            // (atributos da classe Enfermeiro ou Medico)
-
-            switch (tipo) {
-                case ENFERMEIRO: {
-
-                    // Lendo o CRE
-                    entrada.read(reinterpret_cast<char *>(&CRE), sizeof(CRE));
-
-                    funcionarios.push_back(new Enfermeiro(CPF, nome, salario, CRE));
-                    break;
-                }
-                case MEDICO: {
-
-                    // Lendo a especialidade
-
-                    // Lendo o tamanho da string (especialidade)
-                    entrada.read(reinterpret_cast<char *>(&tam), sizeof(tam));
-                    especialidade.resize(tam);
-
-                    // Lendo os caracteres da string (especialidade)
-                    entrada.read(reinterpret_cast<char *>(&especialidade[0]), tam);
-
-                    funcionarios.push_back(new Medico(CPF, nome, salario, especialidade));
-                    break;
-                }
-            }
-
-            // Lendo o tipo
-
-            entrada.read(reinterpret_cast<char *>(&tipo), sizeof(tipo));
+        while (ifs.good()) {
+            Funcionario* f = leitura(line);
+            funcionarios.push_back(f);
+            ifs >> line;
         }
     }
-    entrada.close();
+
+    ifs.close();
 }
 
 bool Cadastro::adiciona(int tipo) {
