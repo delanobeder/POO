@@ -16,7 +16,7 @@ void TextFile::copiaC(string entrada, string saida) {
 
     ifs.get(c);
     while (ifs.good()) {
-        ofs << c;
+        ofs.put(c); // ofs << c;
         ifs.get(c);
     }
 

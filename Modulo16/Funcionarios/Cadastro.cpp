@@ -103,7 +103,7 @@ Funcionario* Cadastro::leitura(string line) {
     // Recupera o salário
 
     getline(ss, column, Cadastro::delimitador);
-    salario = stoi(column);
+    salario = stod(column);
 
     switch (tipo) {
     case ENFERMEIRO: {
