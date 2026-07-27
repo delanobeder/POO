@@ -1,3 +1,4 @@
+#include "Pessoa.h"
 #include "Aluno.h"
 #include "Professor.h"
 

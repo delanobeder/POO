@@ -16,4 +16,3 @@ void Professor::imprime() const {
     Pessoa::imprime();
     cout << "Salario: " << salario << endl;
 }
-

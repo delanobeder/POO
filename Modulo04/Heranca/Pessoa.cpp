@@ -5,6 +5,9 @@ Pessoa::Pessoa(string nome, int idade) :
 nome(nome), idade(idade) {
 }
 
+Pessoa::~Pessoa() {
+}
+
 string Pessoa::getNome() const {
     return nome;
 }
