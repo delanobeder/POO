@@ -1,8 +1,6 @@
-using System;
+public class Main {
 
-public class Program {
-
-  public static void Main(string[] args) {
+  public static void main(String[] args) {
     
     Triangulo t1 = new Triangulo(2, 3, 4);
     Equilatero e1 = new Equilatero(3);
@@ -11,15 +9,15 @@ public class Program {
 
     t1.imprime();
     
-    Console.WriteLine();
+    System.out.println();
     
     e1.imprime();
     
-    Console.WriteLine();
+    System.out.println();
 
     r1.imprime();
 
-    Console.WriteLine();
+    System.out.println();
 
     // Comparando t1 (classe Triangulo) com e1 (classe Equilatero)
     
@@ -33,8 +31,8 @@ public class Program {
     // Ou seja, um objeto da classe filha (Equilatero) é utilizado em um 
     // método que espera-se como parâmetro um objeto da classe mãe (Triangulo)
 
-    Console.Write("Comparando t1 com e1: ");
-    Console.WriteLine(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
+    System.out.print("Comparando t1 com e1: ");
+    System.out.println(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
 
     // Comparando e1 (classe Equilatero) com t1 (classe Triangulo)
     
@@ -47,9 +45,8 @@ public class Program {
     // A classe Equilatero herda esse método
     // (2) t1 é da classe Triangulo => não há Substituição
 
-    Console.Write("Comparando e1 com t1: ");
-    Console.WriteLine(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
-    Console.WriteLine();
+    System.out.print("Comparando e1 com t1: ");
+    System.out.println(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
 
     // Comparando t1 (classe Triangulo) com t1 (classe Triangulo)
     
@@ -61,8 +58,8 @@ public class Program {
     // Ou seja, o método não é herdado
     // (2) t1 é da classe Triangulo => não há Substituição
 
-    Console.Write("Comparando t1 com t1: ");
-    Console.WriteLine(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
+    System.out.print("Comparando t1 com t1: ");
+    System.out.println(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
 
     // Comparando e1 (classe Equilatero) com e1 (classe Equilatero)
     
@@ -77,9 +74,9 @@ public class Program {
     // Ou seja, um objeto da classe filha (Equilatero) é utilizado em um 
     // método que espera-se como parâmetro um objeto da classe mãe (Triangulo)
 
-    Console.Write("Comparando e1 com e1: ");
-    Console.WriteLine(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
-
+    System.out.print("Comparando e1 com e1: ");
+    System.out.println(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
+    
     // Comparando r1 (classe TriRetangulo) com r1 (classe TriRetangulo)
     
     res = r1.compare(r1);
@@ -93,9 +90,8 @@ public class Program {
     // Ou seja, um objeto da classe filha (TriRetangulo) é utilizado em um 
     // método que espera-se como parâmetro um objeto da classe mãe (Triangulo)
 
-    Console.Write("Comparando r1 com r1: ");
-    Console.WriteLine(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
-    Console.WriteLine();
+    System.out.print("Comparando r1 com r1: ");
+    System.out.println(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
 
     // Comparando e1 (classe Equilatero) com r1 (classe TriRetangulo)
     
@@ -110,8 +106,8 @@ public class Program {
     // Ou seja, um objeto da classe filha (TriRetangulo) é utilizado em um 
     // método que espera-se como parâmetro um objeto da classe mãe (Triangulo)
 
-    Console.Write("Comparando e1 com r1: ");
-    Console.WriteLine(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
+    System.out.print("Comparando e1 com r1: ");
+    System.out.println(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
 
     // Comparando r1 (classe TriRetangulo) com e1 (classe Equilatero)
     
@@ -126,7 +122,7 @@ public class Program {
     // Ou seja, um objeto da classe filha (Equilatero) é utilizado em um 
     // método que espera-se como parâmetro um objeto da classe mãe (Triangulo)
 
-    Console.Write("Comparando r1 com e1: ");
-    Console.WriteLine(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
+    System.out.print("Comparando r1 com e1: ");
+    System.out.println(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
   }
 }

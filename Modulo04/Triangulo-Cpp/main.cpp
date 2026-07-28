@@ -1,23 +1,25 @@
-public class Main {
+#include "Triangulo.h"
+#include "Equilatero.h"
+#include "TriRetangulo.h"
 
-  public static void main(String[] args) {
-    
-    Triangulo t1 = new Triangulo(2, 3, 4);
-    Equilatero e1 = new Equilatero(3);
-    TriRetangulo r1 = new TriRetangulo(3, 4, 5);
+int main() {
+
+    Triangulo t1(2, 3, 4);
+    Equilatero e1(3);
+    TriRetangulo r1(3, 4, 5);
     int res;
 
     t1.imprime();
     
-    System.out.println();
+    cout << endl;
     
     e1.imprime();
     
-    System.out.println();
+    cout << endl;
 
     r1.imprime();
 
-    System.out.println();
+    cout << endl;
 
     // Comparando t1 (classe Triangulo) com e1 (classe Equilatero)
     
@@ -31,8 +33,8 @@ public class Main {
     // Ou seja, um objeto da classe filha (Equilatero) é utilizado em um 
     // método que espera-se como parâmetro um objeto da classe mãe (Triangulo)
 
-    System.out.print("Comparando t1 com e1: ");
-    System.out.println(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
+    cout << "Comparando t1 com e1: ";
+    cout << (res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior")) << endl;
 
     // Comparando e1 (classe Equilatero) com t1 (classe Triangulo)
     
@@ -45,9 +47,8 @@ public class Main {
     // A classe Equilatero herda esse método
     // (2) t1 é da classe Triangulo => não há Substituição
 
-    System.out.print("Comparando e1 com t1: ");
-    System.out.println(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
-    System.out.println();
+    cout << "Comparando e1 com t1: ";
+    cout << (res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior")) << endl;
 
     // Comparando t1 (classe Triangulo) com t1 (classe Triangulo)
     
@@ -59,8 +60,8 @@ public class Main {
     // Ou seja, o método não é herdado
     // (2) t1 é da classe Triangulo => não há Substituição
 
-    System.out.print("Comparando t1 com t1: ");
-    System.out.println(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
+    cout << "Comparando t1 com t1: ";
+    cout << (res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior")) << endl;
 
     // Comparando e1 (classe Equilatero) com e1 (classe Equilatero)
     
@@ -75,9 +76,9 @@ public class Main {
     // Ou seja, um objeto da classe filha (Equilatero) é utilizado em um 
     // método que espera-se como parâmetro um objeto da classe mãe (Triangulo)
 
-    System.out.print("Comparando e1 com e1: ");
-    System.out.println(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
-    
+    cout << "Comparando e1 com e1: ";
+    cout << (res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior")) << endl;
+
     // Comparando r1 (classe TriRetangulo) com r1 (classe TriRetangulo)
     
     res = r1.compare(r1);
@@ -91,9 +92,8 @@ public class Main {
     // Ou seja, um objeto da classe filha (TriRetangulo) é utilizado em um 
     // método que espera-se como parâmetro um objeto da classe mãe (Triangulo)
 
-    System.out.print("Comparando r1 com r1: ");
-    System.out.println(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
-    System.out.println();
+    cout << "Comparando r1 com r1: ";
+    cout << (res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior")) << endl;
 
     // Comparando e1 (classe Equilatero) com r1 (classe TriRetangulo)
     
@@ -108,8 +108,8 @@ public class Main {
     // Ou seja, um objeto da classe filha (TriRetangulo) é utilizado em um 
     // método que espera-se como parâmetro um objeto da classe mãe (Triangulo)
 
-    System.out.print("Comparando e1 com r1: ");
-    System.out.println(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
+    cout << "Comparando e1 com r1: ";
+    cout << (res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior")) << endl;
 
     // Comparando r1 (classe TriRetangulo) com e1 (classe Equilatero)
     
@@ -124,7 +124,9 @@ public class Main {
     // Ou seja, um objeto da classe filha (Equilatero) é utilizado em um 
     // método que espera-se como parâmetro um objeto da classe mãe (Triangulo)
 
-    System.out.print("Comparando r1 com e1: ");
-    System.out.println(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
-  }
+    cout << "Comparando r1 com e1: ";
+    cout << (res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior")) << endl;
+
+    return 0;
 }
+

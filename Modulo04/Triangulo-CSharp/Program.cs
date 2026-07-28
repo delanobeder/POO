@@ -1,25 +1,25 @@
-#include "Triangulo.h"
-#include "Equilatero.h"
-#include "TriRetangulo.h"
+using System;
 
-int main() {
+public class Program {
 
-    Triangulo t1(2, 3, 4);
-    Equilatero e1(3);
-    TriRetangulo r1(3, 4, 5);
+  public static void Main(string[] args) {
+    
+    Triangulo t1 = new Triangulo(2, 3, 4);
+    Equilatero e1 = new Equilatero(3);
+    TriRetangulo r1 = new TriRetangulo(3, 4, 5);
     int res;
 
     t1.imprime();
     
-    cout << endl;
+    Console.WriteLine();
     
     e1.imprime();
     
-    cout << endl;
+    Console.WriteLine();
 
     r1.imprime();
 
-    cout << endl;
+    Console.WriteLine();
 
     // Comparando t1 (classe Triangulo) com e1 (classe Equilatero)
     
@@ -33,8 +33,8 @@ int main() {
     // Ou seja, um objeto da classe filha (Equilatero) é utilizado em um 
     // método que espera-se como parâmetro um objeto da classe mãe (Triangulo)
 
-    cout << "Comparando t1 com e1: ";
-    cout << (res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior")) << endl;
+    Console.Write("Comparando t1 com e1: ");
+    Console.WriteLine(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
 
     // Comparando e1 (classe Equilatero) com t1 (classe Triangulo)
     
@@ -47,8 +47,8 @@ int main() {
     // A classe Equilatero herda esse método
     // (2) t1 é da classe Triangulo => não há Substituição
 
-    cout << "Comparando e1 com t1: ";
-    cout << (res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior")) << endl << endl;
+    Console.Write("Comparando e1 com t1: ");
+    Console.WriteLine(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
 
     // Comparando t1 (classe Triangulo) com t1 (classe Triangulo)
     
@@ -60,8 +60,8 @@ int main() {
     // Ou seja, o método não é herdado
     // (2) t1 é da classe Triangulo => não há Substituição
 
-    cout << "Comparando t1 com t1: ";
-    cout << (res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior")) << endl;
+    Console.Write("Comparando t1 com t1: ");
+    Console.WriteLine(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
 
     // Comparando e1 (classe Equilatero) com e1 (classe Equilatero)
     
@@ -76,8 +76,8 @@ int main() {
     // Ou seja, um objeto da classe filha (Equilatero) é utilizado em um 
     // método que espera-se como parâmetro um objeto da classe mãe (Triangulo)
 
-    cout << "Comparando e1 com e1: ";
-    cout << (res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior")) << endl;
+    Console.Write("Comparando e1 com e1: ");
+    Console.WriteLine(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
 
     // Comparando r1 (classe TriRetangulo) com r1 (classe TriRetangulo)
     
@@ -92,8 +92,8 @@ int main() {
     // Ou seja, um objeto da classe filha (TriRetangulo) é utilizado em um 
     // método que espera-se como parâmetro um objeto da classe mãe (Triangulo)
 
-    cout << "Comparando r1 com r1: ";
-    cout << (res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior")) << endl << endl;
+    Console.Write("Comparando r1 com r1: ");
+    Console.WriteLine(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
 
     // Comparando e1 (classe Equilatero) com r1 (classe TriRetangulo)
     
@@ -108,8 +108,8 @@ int main() {
     // Ou seja, um objeto da classe filha (TriRetangulo) é utilizado em um 
     // método que espera-se como parâmetro um objeto da classe mãe (Triangulo)
 
-    cout << "Comparando e1 com r1: ";
-    cout << (res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior")) << endl;
+    Console.Write("Comparando e1 com r1: ");
+    Console.WriteLine(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
 
     // Comparando r1 (classe TriRetangulo) com e1 (classe Equilatero)
     
@@ -124,9 +124,7 @@ int main() {
     // Ou seja, um objeto da classe filha (Equilatero) é utilizado em um 
     // método que espera-se como parâmetro um objeto da classe mãe (Triangulo)
 
-    cout << "Comparando r1 com e1: ";
-    cout << (res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior")) << endl;
-
-    return 0;
+    Console.Write("Comparando r1 com e1: ");
+    Console.WriteLine(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
+  }
 }
-
