@@ -1,3 +1,4 @@
+package br.ufscar.dc.poo;
 public class Time {
     private String nome;
     private Jogador elenco[];

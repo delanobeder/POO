@@ -1,3 +1,4 @@
+package br.ufscar.dc.poo;
 public class Jogador {
     private String nome;
     private int idade;

@@ -1,3 +1,6 @@
+import br.ufscar.dc.poo.Jogador;
+import br.ufscar.dc.poo.Time;
+
 public class Main {
 
     public static void main(String args[]) {
