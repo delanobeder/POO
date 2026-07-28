@@ -1,3 +1,4 @@
+package br.ufscar.dc.poo;
 
 public class Departamento {
     private String nome;

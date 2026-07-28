@@ -1,5 +1,7 @@
 #include "Universidade.h"
 
+using namespace poo;
+
 int main() {
 
     Universidade *ufscar = new Universidade("UFSCar");

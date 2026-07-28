@@ -1,3 +1,5 @@
+import br.ufscar.dc.poo.Universidade;
+
 public class Main {
 
     public static void main(String args[]) {

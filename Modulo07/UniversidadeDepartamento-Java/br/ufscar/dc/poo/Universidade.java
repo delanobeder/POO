@@ -1,4 +1,4 @@
-
+package br.ufscar.dc.poo;
 public class Universidade {
 
     private String nome;
