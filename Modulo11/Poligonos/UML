@@ -1,0 +1,25 @@
+@startuml
+class Poligono {
++Poligono(vector<double>&)
++double getLado(int)
++double getPerimetro()
++int getNroLados()
++{abstract}double getArea()
++void imprime() const
++ostream& operator<<(ostream&, const Poligono&)
+
++{static} bool comparaArea(const Poligono* p1, const Poligono* p2)
++{static} bool comparaNroLados(const Poligono* p1, const Poligono* p2)
+-vector<double>& lados
+}
+
+class Retangulo extends Poligono {
++Retangulo(vector<double>&) 
++double getArea()
+}
+
+class Triangulo extends Poligono {
++Triangulo(vector<double>&)
++double getArea(
+}
+@enduml

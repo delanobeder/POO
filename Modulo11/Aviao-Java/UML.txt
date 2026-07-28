@@ -1,0 +1,28 @@
+@startuml
+interface Voador {
+  +void decolar()
+  +void aterissar()
+}
+
+interface MeioDeTransporte {
+  +void subir()
+  +void descer()
+}
+
+class Aviao implements Voador, MeioDeTransporte{
+  +void decolar()
+  +void aterissar()
+  +void subir()
+  +void descer()
+}
+
+class Passaro implements Voador {
+  +void decolar()
+  +void aterissar()
+}
+
+class Onibus implements MeioDeTransporte{
+  +void subir()
+  +void descer()
+}
+@enduml
