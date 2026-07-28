@@ -5,7 +5,7 @@ Triangulo(cateto1, cateto2, hipotenuza) {
 }
 
 double Retangulo::getArea() const {
-    cout << "Invocando Retangulo" << endl;
+    // cout << "Invocando Retangulo" << endl;
     return lado1 * lado2 / 2;
 }
 

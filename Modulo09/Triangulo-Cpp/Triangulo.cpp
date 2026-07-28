@@ -11,7 +11,7 @@ double Triangulo::getPerimetro() const {
 }
 
 double Triangulo::getArea() const {
-    cout << "Invocando Triangulo" << endl;
+    // cout << "Invocando Triangulo" << endl;
     double p = this->getPerimetro() / 2;
     return sqrt(p * (p - lado1) * (p - lado2) * (p - lado3));
 }
