@@ -113,5 +113,13 @@ public class Main {
     System.out.print("Comparando prof1 com a1: ");
     System.out.println(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
     System.out.println();
+
+    System.out.println("Contador de objetos: " + Pessoa.getContador());
+    
+    Pessoa p4 = new Pessoa("Teste", 20);
+    Aluno a2 = new Aluno("Aluno Teste 2", 18, 808080);
+    Professor prof2 = new Professor("Carrasco do DM", 50, 3000);
+    
+    System.out.println("Contador de objetos: " + Pessoa.getContador());
   }
 }

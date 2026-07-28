@@ -3,13 +3,17 @@ using System;
 public class Pessoa {
 
     private string nome;
-
-
     private int idade;
+    static int contador = 0;
 
     public Pessoa(string nome, int idade) {
         this.nome = nome;
         this.idade = idade;
+        Pessoa.incrementa();
+    }
+
+    ~Pessoa() {
+        Pessoa.decrementa();
     }
 
     public string getNome() {
@@ -35,6 +39,18 @@ public class Pessoa {
     
     public int compare(Pessoa p) {
         return idade - p.idade;
+    }
+
+    public static int getContador() {
+        return Pessoa.contador;
+    }
+
+    private static void incrementa() {
+        Pessoa.contador++;
+    }
+
+    private static void decrementa() {
+        Pessoa.contador--;
     }
 }
 

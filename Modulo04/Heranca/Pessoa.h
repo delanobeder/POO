@@ -15,10 +15,16 @@ public:
     void setNome(string nome);
     virtual void imprime() const;
     int compare(const Pessoa& p) const;
+    static int getContador();
+
 private:
+    static void decrementa();
+    static void incrementa();
     string nome;
     int idade;
+    static int contador;
 };
+
 
 #endif /* PESSOA_H */
 
