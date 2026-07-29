@@ -2,9 +2,9 @@ using System;
 
 public class Ponto2D {
     
-    // atributos da classe
-    private float x;
-    private float y;
+    // atributos da classe + métodos getters e setters
+    private float x { get; set; }
+    private float y { get; set; }
 
     public Ponto2D(float x, float y) { // construtor
         this.x = x;
@@ -12,7 +12,6 @@ public class Ponto2D {
     }
 
     // método da classe
-
     public double distancia(Ponto2D p) {
         double dx = x - p.x;
         double dy = y - p.y;
@@ -26,7 +25,6 @@ public class Ponto2D {
     public void moveY(float dy) {
         this.y += dy;
     }
-
     public void imprime() {
         Console.WriteLine("({0:0.00}, {1:0.00})", this.x, this.y);
     }

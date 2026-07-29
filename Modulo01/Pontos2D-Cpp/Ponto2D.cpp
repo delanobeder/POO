@@ -10,6 +10,22 @@ Ponto2D::Ponto2D(float x, float y) {
 Ponto2D::~Ponto2D() {
 }
 
+float Ponto2D::getX() const {
+    return this->x;
+}
+
+void Ponto2D::setX (float x) {
+    this->x = x;
+}
+
+float Ponto2D::getY() const {
+    return this->y;
+}
+
+void Ponto2D::setY (float y) {
+    this->y = y;
+}
+
 float Ponto2D::distancia(const Ponto2D p) const {
     float dx = this->x - p.x;
     float dy = this->y - p.y;

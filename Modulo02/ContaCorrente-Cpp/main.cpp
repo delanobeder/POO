@@ -1,12 +1,11 @@
 #include <iostream>
-#include "ContaChequeEspecial.h"
-
+#include "ContaCorrente.h"
 using namespace std;
 
 int main() {
 
     ContaCorrente c1(1000, 1200.50);
-    ContaChequeEspecial c2(2000, 0, 500);
+    ContaCorrente c2(2000);
     
     cout << endl << "Antes da Transferência" << endl << endl;
     

@@ -17,8 +17,16 @@ int ContaCorrente::getNumero() const {
     return this->numero;
 }
 
+void ContaCorrente::setNumero(int numero){
+    this->numero = numero;
+}
+
 double ContaCorrente::getSaldo() const {
     return this->saldo;
+}
+
+void ContaCorrente::setSaldo(double saldo){
+    this->saldo = saldo;
 }
 
 bool ContaCorrente::retirada(double valor) {

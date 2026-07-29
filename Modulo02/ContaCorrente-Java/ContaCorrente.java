@@ -14,8 +14,27 @@ public class ContaCorrente {
         this.numero = numero;
         this.saldo = saldo;
     }
+    
+    // métodos getters e setters
+    
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
 
     // métodos da classe
+
     public boolean retirada(double valor) {
         if (saldo - valor >= 0) {
             saldo -= valor;

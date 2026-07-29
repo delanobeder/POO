@@ -6,6 +6,13 @@ public:
     Ponto2D(float x, float y); // construtor
     virtual ~Ponto2D(); // destrutor
     
+    // Métodos getters and setters
+
+    float getX() const;
+    void setX(float);
+    float getY() const;
+    void setY(float);
+
     float distancia(const Ponto2D p) const; // método da classe
     void moveX(float dx);
     void moveY(float dy);

@@ -2,10 +2,10 @@ using System;
 
 public class ContaCorrente {
     
-    // atributos da classe
+    // atributos da classe e métodos getters and setters
 
-    private int numero;
-    private double saldo;
+    private int numero { get; set; }
+    private double saldo { get; set; }
 
     public ContaCorrente(int numero) {
         this.numero = numero;
@@ -38,7 +38,7 @@ public class ContaCorrente {
         return ok;
     }
 
-    virtual public void imprime() {
+    public void imprime() {
         Console.WriteLine("Numero: {0}", this.numero);
         Console.WriteLine("Saldo: {0:0.00}", this.saldo);
     }

@@ -1,7 +1,7 @@
 class Main {
   public static void main(String[] args) {
     ContaCorrente c1 = new ContaCorrente(1000, 1200.50);
-    ContaChequeEspecial c2 = new ContaChequeEspecial(2000, 0, 500);
+    ContaCorrente c2 = new ContaCorrente(2000);
     
     System.out.println("\nAntes da Transferência\n");
     

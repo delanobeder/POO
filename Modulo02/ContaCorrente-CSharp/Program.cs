@@ -3,7 +3,7 @@ using System;
 class Program {
   public static void Main(string[] args) {
     ContaCorrente c1 = new ContaCorrente(1000, 1200.50);
-    ContaChequeEspecial c2 = new ContaChequeEspecial(2000,0, 500);
+    ContaCorrente c2 = new ContaCorrente(2000);
     
     Console.WriteLine("\nAntes da Transferência\n");
     
