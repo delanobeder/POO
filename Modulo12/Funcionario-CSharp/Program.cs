@@ -1,16 +1,32 @@
 using System;
+using System.Collections.Generic;
+using poo;
 
 class Program {
   public static void Main(string[] args) {
 
-    Funcionario f1 = new Medico(12345, "Dr. House", "Neurologista");
+    List<Funcionario> funcionarios = new List<Funcionario>();
+
+    Funcionario f1 = new Medico("123456789-01", "Dr. House", "Neurologista");
     f1.imprime();
     
     Console.WriteLine();
-    
-    Funcionario f2 = new Enfermeiro(67890, "Nurse Beth", 12345);
+
+    Funcionario f2 = new Enfermeiro ("456789012-34", "Charles Cullen", 23451);
     f2.imprime();
 
+    Console.WriteLine();
+
+    Medico f3 = new Medico("345678901-23", "Dr. Patch Adams", "Clínico Geral");
+    f3.imprime();
+
+    Console.WriteLine();
+
+    Enfermeiro f4 = new Enfermeiro("234567890-12", "Nurse Beth", 12345);
+    f4.imprime();
+
+    Console.WriteLine();
+    Console.WriteLine("=========================================");
     Console.WriteLine();
 
     // Cast f1 para Medico
@@ -63,6 +79,34 @@ class Program {
     }
     else { 
         Console.WriteLine("(Cast not OK)"); 
+    }
+
+    Console.WriteLine();
+    Console.WriteLine("=========================================");
+    Console.WriteLine();
+
+    funcionarios.Add(f1);
+    funcionarios.Add(f2);
+    funcionarios.Add(f3);
+    funcionarios.Add(f4);
+
+    funcionarios.Sort(); // Ordenação padrão => por CPF 
+    
+    for (int i = 0; i < funcionarios.Count; i++) {
+        funcionarios[i].imprime();
+        Console.WriteLine();
+    }
+
+    Console.WriteLine("=========================================");
+    Console.WriteLine();
+
+    funcionarios.Sort(Funcionario.CompareProfissao);
+
+    // Construção for each collection
+    
+    foreach (Funcionario f in funcionarios) {
+        f.imprime();
+        Console.WriteLine();
     }
   }
 }
