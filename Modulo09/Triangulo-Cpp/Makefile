@@ -11,4 +11,4 @@ run: $(EXECUTABLE)
 	@./$(EXECUTABLE)
 
 $(EXECUTABLE): *.cpp
-	$(CXX) $(CXX_FLAGS) -I. $^ -o $@ $(LIBRARIES)
+	@$(CXX) $(CXX_FLAGS) -I. $^ -o $@ $(LIBRARIES)
