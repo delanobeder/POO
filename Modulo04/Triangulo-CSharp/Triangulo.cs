@@ -22,7 +22,7 @@ public class Triangulo {
         return soma;
     }
 
-    public double getArea() {
+    public virtual double getArea() {
         double semi = this.getPerimetro() / 2;
         double produto = semi;
         for (int i = 0; i < 3; i++) {

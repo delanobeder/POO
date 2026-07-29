@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 
 public class Aluno : Pessoa {
     private int ra;
@@ -15,7 +16,7 @@ public class Aluno : Pessoa {
         this.ra = ra;
     }
     
-    new public void imprime() {
+    override public void imprime() {
         base.imprime();
         Console.WriteLine("RA: {0}", this.ra);
     }

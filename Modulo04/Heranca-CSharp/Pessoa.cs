@@ -32,7 +32,7 @@ public class Pessoa {
         this.idade = idade;
     }
     
-    public void imprime() {
+    virtual public void imprime() {
         Console.WriteLine("Nome: {0}", this.nome);
         Console.WriteLine("Idade: {0}", this.idade);
     }
