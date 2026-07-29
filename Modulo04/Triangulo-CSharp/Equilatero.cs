@@ -4,7 +4,7 @@ public class Equilatero : Triangulo {
     public Equilatero(double lado) : base (lado) {
     }
 
-    override public double getArea() {
+    public override double getArea() {
         return lados[0] * lados[0] * Math.Sqrt(3) / 4;
     }
 }

@@ -14,7 +14,7 @@ public class Aluno : Pessoa {
         this.RA = RA;
     }
     
-    override public void imprime() {
+    public override void imprime() {
         base.imprime();
         Console.WriteLine("RA: " + this.RA);
     }

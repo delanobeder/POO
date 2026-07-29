@@ -8,7 +8,7 @@ public class TriRetangulo : Triangulo {
         base(cateto1, cateto2, hipotenusa) {
     }
 
-    override public double getArea() {
+    public override double getArea() {
         /*
          * cateto1 é o lado[0]
          * cateto2 é o lado[1]

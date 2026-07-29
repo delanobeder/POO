@@ -14,7 +14,7 @@ public class Professor : Pessoa {
         this.salario = salario;
     }
 
-    override public void imprime() {
+    public override void imprime() {
         base.imprime();
         Console.WriteLine("Salário: " + this.salario);
     }
