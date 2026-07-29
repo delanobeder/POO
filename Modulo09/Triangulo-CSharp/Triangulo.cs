@@ -14,7 +14,7 @@ public class Triangulo {
         return lado1 + lado2 + lado3;
     }
 
-    public double getArea() {
+    public virtual double getArea() {
         double p = getPerimetro() / 2;
 
         return Math.Sqrt(p * (p - lado1) * (p - lado2) * (p - lado3));
