@@ -2,39 +2,39 @@
 #include <iostream>
 using namespace std;
 
-Pessoa::Pessoa(string nome, int CPF) : nome(nome), CPF(CPF) {
-    cout << "Construtor: (" << nome << ", " << CPF << ")" << endl;
-}
+namespace poo {
 
-Pessoa::~Pessoa() {
-    cout << "Destrutor Pessoa: (" << nome << ", " << CPF << ")" << endl << endl;
-}
+    Pessoa::Pessoa(string nome, int CPF) : nome(nome), CPF(CPF) {
+        cout << "Construtor: (" << nome << ", " << CPF << ")" << endl;
+    }
 
-int Pessoa::getCPF() const {
-    return CPF;
-}
+    Pessoa::~Pessoa() {
+        cout << "Destrutor Pessoa: (" << nome << ", " << CPF << ")" << endl << endl;
+    }
 
-void Pessoa::setCPF(int CPF) {
-    this->CPF = CPF;
-}
+    int Pessoa::getCPF() const {
+        return CPF;
+    }
 
-string Pessoa::getNome() const {
-    return nome;
-}
+    void Pessoa::setCPF(int CPF) {
+        this->CPF = CPF;
+    }
 
-void Pessoa::setNome(string nome) {
-    this->nome = nome;
-}
+    string Pessoa::getNome() const {
+        return nome;
+    }
 
-void Pessoa::imprime() const {
-    cout << "Nome: " << nome << endl;
-    cout << "CPF: " << CPF << endl;
-}
+    void Pessoa::setNome(string nome) {
+        this->nome = nome;
+    }
 
-bool Pessoa::comparaNome(Pessoa* p1, Pessoa* p2) {
-    return p1->nome < p2->nome;
-}
+    void Pessoa::imprime() const {
+        cout << "Nome: " << nome << endl;
+        cout << "CPF: " << CPF << endl;
+    }
 
-bool Pessoa::comparaCPF(Pessoa* p1, Pessoa* p2) {
-    return p1->CPF < p2->CPF;
+    bool Pessoa::comparaNome(Pessoa *p1, Pessoa *p2) {
+        return p1->nome < p2->nome;
+    }
+    
 }

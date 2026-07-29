@@ -2,19 +2,22 @@
 #include <iostream>
 using namespace std;
 
-Professor::Professor(string nome, int CPF, double salario) : 
-Pessoa(nome, CPF), salario(salario) {
-}
+namespace poo {
+    
+    Professor::Professor(string nome, int CPF, double salario) : Pessoa(nome, CPF), salario(salario) {
+    }
 
-Professor::~Professor() {
-    cout << "Destrutor Professor: (" << salario << ")" << endl;
-}
+    Professor::~Professor() {
+        cout << "Destrutor Professor: (" << salario << ")" << endl;
+    }
 
-double Professor::getSalario() const {
-    return salario;
-}
+    double Professor::getSalario() const {
+        return salario;
+    }
 
-void Professor::imprime() const {
-    Pessoa::imprime();
-    cout << "Salário: " << this->getSalario() << endl;
+    void Professor::imprime() const {
+        Pessoa::imprime();
+        cout << "Salário: " << this->getSalario() << endl;
+    }
+    
 }

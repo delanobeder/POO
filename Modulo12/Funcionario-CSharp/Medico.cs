@@ -9,7 +9,7 @@ namespace poo {
             this.especialidade = especialidade;
         }
 
-        override public string getProfissao() {
+        public override string getProfissao() {
             return "Medico";
         }
 
@@ -17,7 +17,7 @@ namespace poo {
             return especialidade;
         }
 
-        new public void imprime() {
+        public override void imprime() {
             base.imprime();
             Console.WriteLine("Especialidade: {0}", this.especialidade);
         }

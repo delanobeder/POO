@@ -9,7 +9,7 @@ namespace poo {
             this.CRE = CRE;
         }
 
-        override public string getProfissao() {
+        public override string getProfissao() {
             return "Enfermeiro";
         }
 
@@ -17,7 +17,7 @@ namespace poo {
             return CRE;
         }
 
-        new public void imprime() {
+        public override void imprime() {
             base.imprime();
             Console.WriteLine("CRE: {0}", this.CRE);
         }

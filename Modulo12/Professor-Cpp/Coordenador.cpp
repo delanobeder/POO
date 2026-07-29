@@ -2,23 +2,26 @@
 #include <iostream>
 using namespace std;
 
-Coordenador::Coordenador(string nome, int CPF, double salario, string curso) : 
-    Professor(nome, CPF, salario), curso(curso) {
-}
+namespace poo {
 
-Coordenador::~Coordenador() {
-    cout << "Destrutor Coordenador: (" << curso << ")" << endl;
-}
+    Coordenador::Coordenador(string nome, int CPF, double salario, string curso) : Professor(nome, CPF, salario), curso(curso) {
+    }
 
-double Coordenador::getSalario() const {
-    return Professor::getSalario() + 2000;
-}
+    Coordenador::~Coordenador() {
+        cout << "Destrutor Coordenador: (" << curso << ")" << endl;
+    }
 
-string Coordenador::getCurso() const {
-    return curso;
-}
+    double Coordenador::getSalario() const {
+        return Professor::getSalario() + 2000;
+    }
 
-void Coordenador::imprime() const {
-    Professor::imprime();
-    cout << "Curso: " << getCurso() << endl;
+    string Coordenador::getCurso() const {
+        return curso;
+    }
+
+    void Coordenador::imprime() const {
+        Professor::imprime();
+        cout << "Curso: " << getCurso() << endl;
+    }
+
 }

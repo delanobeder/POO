@@ -13,7 +13,7 @@ namespace poo {
 
         public abstract string getProfissao(); // método abstrato
 
-        public void imprime() {
+        virtual public void imprime() {
             Console.WriteLine("Nome: {0}", this.nome);
             Console.WriteLine("CPF: {0}", this.CPF);
             Console.WriteLine("Profissão : {0}", this.getProfissao());

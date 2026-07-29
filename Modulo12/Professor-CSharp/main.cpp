@@ -23,7 +23,7 @@ int main() {
     pessoas.push_back(p2);
     pessoas.push_back(p3);
 
-    for (long unsigned int i = 0; i < pessoas.size(); i++) {
+    for (long unsigned int i = 0; i < 3; i++) {
         pessoas[i]->imprime();
         cout << endl;
     }
@@ -32,7 +32,7 @@ int main() {
 
     sort(pessoas.begin(), pessoas.end(), Pessoa::comparaNome);
 
-    for (long unsigned int i = 0; i < pessoas.size(); i++) {
+    for (long unsigned int i = 0; i < 3; i++) {
         pessoas[i]->imprime();
         cout << endl;
     }
