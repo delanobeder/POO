@@ -8,7 +8,7 @@ public class ContaChequeEspecial : ContaCorrente {
         this.credito = credito;
     } 
     
-    override public void imprime() {
+    public override void imprime() {
         base.imprime();
         Console.WriteLine("Credito: {0:0.00}", this.credito);
     }
