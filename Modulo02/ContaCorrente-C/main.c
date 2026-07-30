@@ -11,15 +11,21 @@ void main() {
     c2.numero = 2000;
     c2.saldo = 0;
     
-    printf("Antes da Transferência\n\n");
-    
+    printf("============================\n");
+    printf("Antes da Transferência\n");
+    printf("============================\n\n");
+
     imprime(c1);
     imprime(c2);
     
     transferencia(&c1, &c2, 500);
-    
-    printf("\nDepois da Transferência\n\n");
+
+    printf("\n============================\n");
+    printf("Depois da Transferência\n");
+    printf("============================\n\n");   
     
     imprime(c1);
     imprime(c2);
+
+    printf("\n");
 }

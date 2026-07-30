@@ -22,5 +22,5 @@ int transferencia(ContaCorrente* c1, ContaCorrente* c2, double valor) {
 }
 
 void imprime(ContaCorrente conta) {
-    printf("Numero: %d, saldo: %5.2f\n", conta.numero, conta.saldo);
+    printf("Numero: %d, saldo: %.2f\n", conta.numero, conta.saldo);
 }

@@ -1,7 +1,10 @@
 #include <iostream>
+#include <iomanip>
 #include "ContaCorrente.h"
 
 using namespace std;
+
+// Construtor
 
 ContaCorrente::ContaCorrente(int numero, double saldo) {
     cout << "Construindo Conta " << numero << endl;
@@ -9,9 +12,13 @@ ContaCorrente::ContaCorrente(int numero, double saldo) {
     this->saldo = saldo;
 }
 
+// Destrutor
+
 ContaCorrente::~ContaCorrente() {
     cout << "Destruindo Conta " << numero << endl;
 }
+
+// Métodos getters e setters
 
 int ContaCorrente::getNumero() const {
     return this->numero;
@@ -28,6 +35,8 @@ double ContaCorrente::getSaldo() const {
 void ContaCorrente::setSaldo(double saldo){
     this->saldo = saldo;
 }
+
+// Outros métodos da classe
 
 bool ContaCorrente::retirada(double valor) {
     if (saldo >= valor) {
@@ -51,6 +60,7 @@ bool ContaCorrente::transferencia(ContaCorrente &outra, double valor) {
 }
 
 void ContaCorrente::imprime() const {
-    cout << "Numero: " << numero << endl;
+    cout << fixed << setprecision(2);
+    cout << "Numero: " << numero << ", ";
     cout << "Saldo: " << saldo << endl;
 }

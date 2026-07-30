@@ -2,10 +2,12 @@ using System;
 
 public class ContaCorrente {
     
-    // atributos da classe e métodos getters and setters
+    // Atributos da classe
 
-    private int numero { get; set; }
-    private double saldo { get; set; }
+    private int numero;
+    private double saldo;
+
+    // Construtores
 
     public ContaCorrente(int numero) {
         this.numero = numero;
@@ -17,7 +19,25 @@ public class ContaCorrente {
         this.saldo = saldo;
     }
 
-    // métodos da classe
+    // Métodos getters e setters
+
+    public int getNumero() {
+        return this.numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public double getSaldo() {
+        return this.saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    // Outros Métodos da classe
     public bool retirada(double valor) {
         if (saldo - valor >= 0) {
             saldo -= valor;
@@ -39,7 +59,7 @@ public class ContaCorrente {
     }
 
     public void imprime() {
-        Console.WriteLine("Numero: {0}", this.numero);
-        Console.WriteLine("Saldo: {0:0.00}", this.saldo);
+        Console.Write("Numero: {0}", this.numero);
+        Console.WriteLine(", Saldo: {0:0.00}", this.saldo);
     }
 }

@@ -22,10 +22,13 @@ int main() {
     p1.moveY(5);
     p2.moveY(5);
     
-    p1.imprime();
-    p2.imprime();
+    //p1.imprime();
+    printf("(%.2f, %.2f)\n", p1.getX(), p1.getY());
+    //p2.imprime();
+    printf("(%.2f, %.2f)\n", p2.getX(), p2.getY());
+
     printf("dist(P1, P2) = %.2f\n", p1.distancia(p2));
-    printf("dist(P2, P1) = %.2f\n\n", p2.distancia(p1));
+    printf("dist(P2, P1) = %.2f\n", p2.distancia(p1));
     
     return 0;
 }

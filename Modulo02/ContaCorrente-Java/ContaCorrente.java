@@ -1,9 +1,11 @@
 public class ContaCorrente {
     
-    // atributos da classe
+    // Atributos da classe
 
     private int numero;
     private double saldo;
+
+    // Construtores 
 
     public ContaCorrente(int numero) {
         this.numero = numero;
@@ -15,7 +17,7 @@ public class ContaCorrente {
         this.saldo = saldo;
     }
     
-    // métodos getters e setters
+    // Métodos getters e setters
     
     public int getNumero() {
         return numero;
@@ -33,7 +35,7 @@ public class ContaCorrente {
         this.saldo = saldo;
     }
 
-    // métodos da classe
+    // Outros Métodos da classe
 
     public boolean retirada(double valor) {
         if (saldo - valor >= 0) {
@@ -56,7 +58,7 @@ public class ContaCorrente {
     }
 
     public void imprime() {
-        System.out.println("Numero: " + numero);
-        System.out.println("Saldo: " + saldo);
+        System.out.printf("Numero: %d", numero);
+        System.out.printf(", Saldo: %.2f\n", saldo);
     }
 }

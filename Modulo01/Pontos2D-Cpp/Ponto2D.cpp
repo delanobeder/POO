@@ -1,14 +1,24 @@
 #include <cmath>
 #include <cstdio>
+#include <iostream>
+#include <iomanip>
 #include "Ponto2D.h"
+
+using namespace std;
+
+// construtor
 
 Ponto2D::Ponto2D(float x, float y) {
     this->x = x;
     this->y = y;
 }
 
+// destrutor
+
 Ponto2D::~Ponto2D() {
 }
+
+// Métodos getters and setters
 
 float Ponto2D::getX() const {
     return this->x;
@@ -26,6 +36,8 @@ void Ponto2D::setY (float y) {
     this->y = y;
 }
 
+// Outros métodos da classe
+
 float Ponto2D::distancia(const Ponto2D p) const {
     float dx = this->x - p.x;
     float dy = this->y - p.y;
@@ -41,5 +53,6 @@ void Ponto2D::moveY(float dy) {
 }
 
 void Ponto2D::imprime() {
-    printf("(%.2f, %.2f)\n", this->x, this->y);
+    cout << fixed << setprecision(2);
+    cout << "(" << this->x << ", " << this->y << ")" << endl;
 }

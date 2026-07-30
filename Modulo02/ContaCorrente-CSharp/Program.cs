@@ -5,20 +5,22 @@ class Program {
     ContaCorrente c1 = new ContaCorrente(1000, 1200.50);
     ContaCorrente c2 = new ContaCorrente(2000);
     
-    Console.WriteLine("\nAntes da Transferência\n");
+    Console.WriteLine("\n============================");
+    Console.WriteLine("Antes da Transferência");
+    Console.WriteLine("============================\n");
     
     c1.imprime();
-    Console.WriteLine();
     c2.imprime();
     
     c1.transferencia(c2, 500);
     
-    Console.WriteLine("\nDepois da Transferência\n");
+    Console.WriteLine("\n============================");
+    Console.WriteLine("Depois da Transferência");
+    Console.WriteLine("============================\n");
     
     c1.imprime();
-    Console.WriteLine();
     c2.imprime();
-    
-    Console.WriteLine();    
+
+    Console.WriteLine();
   }
 }
