@@ -8,6 +8,7 @@ SRCS := $(wildcard *.cpp)
 BINS := $(SRCS:%.cpp=%)
 
 all: ${BINS}
+	@rm -rf ${BINS}
 
 %: %.cpp
 	$(CXX) $(CXX_FLAGS) -I. $< -o $@ $(LIBRARIES)
