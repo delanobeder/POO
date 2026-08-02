@@ -9,12 +9,7 @@ public class ContaCorrente {
 
     // Construtores
 
-    public ContaCorrente(int numero) {
-        this.numero = numero;
-        this.saldo = 0;
-    } 
-
-    public ContaCorrente(int numero, double saldo) {
+    public ContaCorrente(int numero, double saldo = 0) {
         this.numero = numero;
         this.saldo = saldo;
     }
