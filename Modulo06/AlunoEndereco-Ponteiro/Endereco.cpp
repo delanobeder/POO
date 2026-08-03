@@ -3,57 +3,61 @@
 
 using namespace std;
 
-// construtor com 4 parâmetros
+namespace poo {
 
-Endereco::Endereco(string logradouro, int numero, string cidade, string estado) {
+    // construtor com 4 parâmetros
 
-    this->logradouro = logradouro;
-    this->numero = numero;
-    this->cidade = cidade;
-    this->estado = estado;
-}
+    Endereco::Endereco(string logradouro, int numero, string cidade, string estado) {
 
-// destrutor da classe
+        this->logradouro = logradouro;
+        this->numero = numero;
+        this->cidade = cidade;
+        this->estado = estado;
+    }
 
-Endereco::~Endereco() {
-    cout << "Destrutor Endereco (" << logradouro << ", " << numero << ")" << endl;
-}
+    // destrutor da classe
 
-string Endereco::getLogradouro() const {
-    return logradouro;
-}
+    Endereco::~Endereco() {
+        cout << "Destrutor Endereco (" << logradouro << ", " << numero << ")" << endl;
+    }
 
-void Endereco::setLogradouro(string val) {
-    logradouro = val;
-}
+    string Endereco::getLogradouro() const {
+        return logradouro;
+    }
 
-int Endereco::getNumero() const {
-    return numero;
-}
+    void Endereco::setLogradouro(string val) {
+        logradouro = val;
+    }
 
-void Endereco::setNumero(int val) {
-    numero = val;
-}
+    int Endereco::getNumero() const {
+        return numero;
+    }
 
-string Endereco::getCidade() const {
-    return cidade;
-}
+    void Endereco::setNumero(int val) {
+        numero = val;
+    }
 
-void Endereco::setCidade(string val) {
-    cidade = val;
-}
+    string Endereco::getCidade() const {
+        return cidade;
+    }
 
-string Endereco::getEstado() const {
-    return estado;
-}
+    void Endereco::setCidade(string val) {
+        cidade = val;
+    }
 
-void Endereco::setEstado(string val) {
-    estado = val;
-}
+    string Endereco::getEstado() const {
+        return estado;
+    }
 
-void Endereco::imprime() const {
-    cout << "Logradouro: " << this->getLogradouro() << endl;
-    cout << "Numero: " << this->getNumero() << endl;
-    cout << "Cidade: " << this->getCidade() << endl;
-    cout << "Estado: " << this->getEstado() << endl;
+    void Endereco::setEstado(string val) {
+        estado = val;
+    }
+
+    void Endereco::imprime() const {
+        cout << "Logradouro: " << this->getLogradouro() << endl;
+        cout << "Numero: " << this->getNumero() << endl;
+        cout << "Cidade: " << this->getCidade() << endl;
+        cout << "Estado: " << this->getEstado() << endl;
+    }
+
 }

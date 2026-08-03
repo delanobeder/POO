@@ -3,6 +3,7 @@
 #include <cstring>
 
 namespace poo {
+
     // construtor com 2 parâmetros
 
     Pessoa::Pessoa(string nome, string CPF) : nome(nome), CPF(CPF) {
@@ -82,4 +83,5 @@ namespace poo {
             }
         }
     }
+    
 }

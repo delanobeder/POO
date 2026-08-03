@@ -4,7 +4,7 @@ JAVA        := java
 EXECUTABLE  := Main
 
 all: run
-	@rm -rf *.class
+	@find . -name "*.class" -type f -delete
 
 run: $(EXECUTABLE)
 	@$(JAVA) $(EXECUTABLE)

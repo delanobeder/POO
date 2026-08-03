@@ -1,45 +1,48 @@
 using System;
 
-public class Aluno {
-    private string nome;
-    private int RA;
-    private Endereco endereco;
+namespace poo {
 
-    public Aluno(string nome, int RA, Endereco endereco) {
-        this.nome = nome;
-        this.RA = RA;
-        this.endereco = endereco;
-    }
+    public class Aluno {
+        private string nome;
+        private int RA;
+        private Endereco endereco;
 
-    public string getNome() {
-        return this.nome;
-    }
+        public Aluno(string nome, int RA, Endereco endereco) {
+            this.nome = nome;
+            this.RA = RA;
+            this.endereco = endereco;
+        }
 
-    public void setNome(string nome) {
-        this.nome = nome;
-    }
+        public string getNome() {
+            return this.nome;
+        }
 
-    public int getRA() {
-        return this.RA;
-    }
+        public void setNome(string nome) {
+            this.nome = nome;
+        }
 
-    public void setRA(int RA) {
-        this.RA = RA;
-    }
+        public int getRA() {
+            return this.RA;
+        }
 
-    public Endereco getEndereco() {
-        return this.endereco;
-    }
+        public void setRA(int RA) {
+            this.RA = RA;
+        }
 
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
-    }
+        public Endereco getEndereco() {
+            return this.endereco;
+        }
 
-    public void imprime() {
-        Console.WriteLine("-------------------------------------");
-        Console.WriteLine("Nome: " + this.getNome());
-        Console.WriteLine("RA: " + this.getRA());
-        Console.WriteLine("<Endereco>");
-        this.getEndereco().imprime();
+        public void setEndereco(Endereco endereco) {
+            this.endereco = endereco;
+        }
+
+        public void imprime() {
+            Console.WriteLine("-------------------------------------");
+            Console.WriteLine("Nome: " + this.getNome());
+            Console.WriteLine("RA: " + this.getRA());
+            Console.WriteLine("<Endereco>");
+            this.getEndereco().imprime();
+        }
     }
 }

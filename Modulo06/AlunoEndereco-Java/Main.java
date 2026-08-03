@@ -1,3 +1,5 @@
+import br.ufscar.dc.poo.Aluno;
+import br.ufscar.dc.poo.Endereco;
 
 public class Main {
 

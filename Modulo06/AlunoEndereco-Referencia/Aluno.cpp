@@ -3,47 +3,50 @@
 
 using namespace std;
 
-// construtor com 3 parâmetros
+namespace poo {
 
-Aluno::Aluno(string nome, int RA, Endereco& endereco) : nome(nome), RA(RA),
-endereco(endereco) {
-}
+    // construtor com 3 parâmetros
 
-// destrutor da classe
+    Aluno::Aluno(string nome, int RA, Endereco &endereco) : nome(nome), RA(RA),
+                                                            endereco(endereco) {
+    }
 
-Aluno::~Aluno() {
-    cout << "Destrutor Aluno (" << nome << ", " << RA << ")" << endl;
-    
-}
+    // destrutor da classe
 
-string Aluno::getNome() const {
-    return nome;
-}
+    Aluno::~Aluno() {
+        cout << "Destrutor Aluno (" << nome << ", " << RA << ")" << endl;
+    }
 
-void Aluno::setNome(string val) {
-    nome = val;
-}
+    string Aluno::getNome() const {
+        return nome;
+    }
 
-int Aluno::getRA() const {
-    return RA;
-}
+    void Aluno::setNome(string val) {
+        nome = val;
+    }
 
-void Aluno::setRA(int val) {
-    RA = val;
-}
+    int Aluno::getRA() const {
+        return RA;
+    }
 
-Endereco& Aluno::getEndereco() const {
-    return endereco;
-}
+    void Aluno::setRA(int val) {
+        RA = val;
+    }
 
-void Aluno::setEndereco(Endereco& val) {
-    endereco = val;
-}
+    Endereco &Aluno::getEndereco() const {
+        return endereco;
+    }
 
-void Aluno::imprime() const {
-    cout << "-------------------------------------" << endl;
-    cout << "Nome: " << this->getNome() << endl;
-    cout << "RA: " << this->getRA() << endl;
-    cout << "<Endereco>" << endl;
-    this->getEndereco().imprime();
+    void Aluno::setEndereco(Endereco &val) {
+        endereco = val;
+    }
+
+    void Aluno::imprime() const {
+        cout << "-------------------------------------" << endl;
+        cout << "Nome: " << this->getNome() << endl;
+        cout << "RA: " << this->getRA() << endl;
+        cout << "<Endereco>" << endl;
+        this->getEndereco().imprime();
+    }
+
 }

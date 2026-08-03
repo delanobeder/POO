@@ -1,3 +1,5 @@
+package br.ufscar.dc.poo;
+
 public class Aluno {
     private String nome;
     private int RA;

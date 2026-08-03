@@ -1,3 +1,5 @@
+package br.ufscar.dc.poo;
+
 public class Endereco {
 
     private String logradouro;

@@ -6,21 +6,26 @@
 
 using namespace std;
 
-class Aluno {
+namespace poo {
+
+    class Aluno {
     public:
-        Aluno(string nome, int RA, Endereco& endereco);
+        Aluno(string nome, int RA, Endereco &endereco);
         virtual ~Aluno();
         string getNome() const;
         void setNome(string val);
         int getRA() const;
         void setRA(int val);
-        Endereco& getEndereco() const;
-        void setEndereco(Endereco& val);
+        Endereco &getEndereco() const;
+        void setEndereco(Endereco &val);
         void imprime() const;
+
     private:
         string nome;
         int RA;
-        Endereco& endereco;
-};
+        Endereco &endereco;
+    };
+
+}
 
 #endif // ALUNO_H

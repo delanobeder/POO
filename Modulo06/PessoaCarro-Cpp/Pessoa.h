@@ -7,6 +7,7 @@
 using namespace std;
 
 namespace poo {
+
     class Pessoa {
     public:
         Pessoa(string nome, string CPF);
@@ -25,5 +26,6 @@ namespace poo {
         Carro *carros[3];
         int qtde;
     };
+    
 }
 #endif // ALUNO_H
