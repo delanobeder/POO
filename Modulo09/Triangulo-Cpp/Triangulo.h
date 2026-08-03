@@ -5,25 +5,29 @@
 #include <iostream>
 using namespace std;
 
-class Triangulo {
-public:
-    Triangulo(double lado1, double lado2, double lado3);
-    double getPerimetro() const;
-    virtual double getArea() const;
+namespace poo {
 
-    bool operator>(const Triangulo& obj) const;
-    bool operator>=(const Triangulo& obj) const;
-    bool operator<(const Triangulo& obj) const;
-    bool operator<=(const Triangulo& obj) const;
-    bool operator==(const Triangulo& obj) const;
-    bool operator!=(const Triangulo& obj) const;
+    class Triangulo {
+    public:
+        Triangulo(double lado1, double lado2, double lado3);
+        double getPerimetro() const;
+        virtual double getArea() const;
 
-    friend ostream& operator<<(ostream& os, const Triangulo& obj);
-protected:
-    double lado1;
-    double lado2;
-    double lado3;
-};
+        bool operator>(const Triangulo &obj) const;
+        bool operator>=(const Triangulo &obj) const;
+        bool operator<(const Triangulo &obj) const;
+        bool operator<=(const Triangulo &obj) const;
+        bool operator==(const Triangulo &obj) const;
+        bool operator!=(const Triangulo &obj) const;
+
+        friend ostream &operator<<(ostream &os, const Triangulo &obj);
+
+    protected:
+        double lado1;
+        double lado2;
+        double lado3;
+    };
+
+}
 
 #endif /* TRIANGULO_H */
-

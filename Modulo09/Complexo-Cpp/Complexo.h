@@ -4,30 +4,33 @@
 #include <iostream>
 using namespace std;
 
-class Complexo {
-public:
-    Complexo(double real, double imaginaria);
-    virtual ~Complexo();
-    void imprime();
+namespace poo {
 
-    // operadores aritméticos binários
+    class Complexo {
+    public:
+        Complexo(double real, double imaginaria);
+        virtual ~Complexo();
+        void imprime();
 
-    Complexo operator+(const Complexo& obj) const;
-    Complexo operator-(const Complexo& obj) const;
-    Complexo operator*(const Complexo& obj) const;
-    Complexo operator/(const Complexo& obj) const;
+        // operadores aritméticos binários
 
-    // operador aritmético unário
+        Complexo operator+(const Complexo &obj) const;
+        Complexo operator-(const Complexo &obj) const;
+        Complexo operator*(const Complexo &obj) const;
+        Complexo operator/(const Complexo &obj) const;
 
-    Complexo operator-() const;
+        // operador aritmético unário
 
-    // função friend (para impressão via cout)
-    
-    friend ostream& operator<<(ostream& os, const Complexo& obj);
-private:
-    double real;
-    double imaginaria;
-};
+        Complexo operator-() const;
 
+        // função friend (para impressão via cout)
+
+        friend ostream &operator<<(ostream &os, const Complexo &obj);
+
+    private:
+        double real;
+        double imaginaria;
+    };
+
+}
 #endif /* COMPLEXO_H */
-

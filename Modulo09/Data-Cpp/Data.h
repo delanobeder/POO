@@ -5,35 +5,39 @@
 #include <iomanip>
 using namespace std;
 
-class Data
-{
-public:
-    // operadores relacionais
+namespace poo {
 
-    bool operator>(const Data& right) const;
-    bool operator>=(const Data &right) const;
-    bool operator<(const Data &right) const;
-    bool operator<=(const Data &right) const;
-    bool operator==(const Data &right) const;
-    bool operator!=(const Data &right) const;
+    class Data {
+    public:
+        // operadores relacionais
 
-    // operadores ++
+        bool operator>(const Data &right) const;
+        bool operator>=(const Data &right) const;
+        bool operator<(const Data &right) const;
+        bool operator<=(const Data &right) const;
+        bool operator==(const Data &right) const;
+        bool operator!=(const Data &right) const;
 
-    // prefix increment
-    Data &operator++();
+        // operadores ++
 
-    // postfix increment
-    Data operator++(int inc);
+        // prefix increment
+        Data &operator++();
 
-    // função friend (impressão usando cout)
-    friend ostream &operator<<(ostream &os, const Data &obj);
+        // postfix increment
+        Data operator++(int inc);
 
-    // função friend (leitura usando cin)
-    friend istream &operator>>(istream &is, Data &obj);
-private:
-    void incrementa();
-    int compare(const Data outra) const;
-    int dia, mes, ano;
-};
+        // função friend (impressão usando cout)
+        friend ostream &operator<<(ostream &os, const Data &obj);
+
+        // função friend (leitura usando cin)
+        friend istream &operator>>(istream &is, Data &obj);
+
+    private:
+        void incrementa();
+        int compare(const Data outra) const;
+        int dia, mes, ano;
+    };
+
+}
 
 #endif /* DATA_H */

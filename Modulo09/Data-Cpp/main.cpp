@@ -1,5 +1,7 @@
 #include "Data.h"
 
+using namespace poo;
+
 int main() {
         
     Data D1;

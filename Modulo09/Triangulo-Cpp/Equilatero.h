@@ -3,11 +3,16 @@
 
 #include "Triangulo.h"
 
-class Equilatero : public Triangulo {
-public:
-    Equilatero(double lado);
-    double getArea() const;
-private:
-};
+namespace poo {
+
+    class Equilatero : public Triangulo {
+    public:
+        Equilatero(double lado);
+        double getArea() const;
+
+    private:
+    };
+
+}
 
 #endif /* EQUILATERO_H */

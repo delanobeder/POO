@@ -2,6 +2,8 @@
 #include "Equilatero.h"
 #include "Retangulo.h"
 
+using namespace poo;
+
 int main() {
 
     Triangulo t1(5,4,3);
