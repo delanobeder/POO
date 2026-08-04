@@ -1,5 +1,5 @@
-#ifndef ALUNO_H
-#define ALUNO_H
+#ifndef PESSOA_H
+#define PESSOA_H
 
 #include "Carro.h"
 #include <string>
@@ -28,4 +28,4 @@ namespace poo {
     };
     
 }
-#endif // ALUNO_H
+#endif /* PESSOA_H */
