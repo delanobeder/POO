@@ -7,18 +7,23 @@ using namespace std;
 
 class Pessoa {
 public:
-    Pessoa(string nome, int idade);
     Pessoa();
+    Pessoa(string nome, int idade);
+    virtual ~Pessoa();
     string getNome() const;
     void setNome(string nome);
     int getIdade() const;
     void setIdade(int idade);
     virtual void imprime() const;
-    int compare(const Pessoa& p) const;
+    static int getContador();
 private:
     string nome;
     int idade;
+    static int contador;
+    static void decrementa();
+    static void incrementa();
 };
+
 
 #endif /* PESSOA_H */
 

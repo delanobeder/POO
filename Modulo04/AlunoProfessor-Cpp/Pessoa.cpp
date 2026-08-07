@@ -1,11 +1,22 @@
 
 #include "Pessoa.h"
 
+int Pessoa::contador = 0;
+
 Pessoa::Pessoa() {
+    incrementa();
+    cout << "Construtor Pessoa()" << endl;
 }
 
 Pessoa::Pessoa(string nome, int idade) :
 nome(nome), idade(idade) {
+    incrementa();
+    cout << "Construtor: " << this->nome << endl;
+}
+
+Pessoa::~Pessoa() {
+    Pessoa::decrementa();
+    cout << "Destrutor: " << this->nome << endl;
 }
 
 string Pessoa::getNome() const {
@@ -29,7 +40,14 @@ void Pessoa::imprime() const {
     cout << "Idade: " << idade << endl;
 }
 
-int Pessoa::compare(const Pessoa& p) const {
-    return idade - p.idade;
+int Pessoa::getContador() {
+    return Pessoa::contador;
 }
 
+void Pessoa::incrementa() {
+    Pessoa::contador++;
+}
+
+void Pessoa::decrementa() {
+    Pessoa::contador--;
+}

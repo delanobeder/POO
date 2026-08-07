@@ -4,9 +4,18 @@ public class Pessoa {
     private String nome;
     private int idade;
 
-    public Pessoa(String nome, int idade) {
+    private static int contador = 0;
+
+    public Pessoa(String nome, int idade) {        
         this.nome = nome;
         this.idade = idade;
+        incrementa();
+        Console.WriteLine("Construtor: " + this.nome);
+    }
+
+    ~Pessoa() {
+        Pessoa.decrementa();
+        Console.WriteLine("Destrutor: " + this.nome);
     }
 
     public int getIdade() {
@@ -30,8 +39,16 @@ public class Pessoa {
         Console.WriteLine("Idade: " + this.idade);
     }
     
-    public int compare(Pessoa p) {
-        return idade - p.idade;
+    public static int getContador() {
+        return Pessoa.contador;
+    }
+
+    private static void decrementa() {
+        Pessoa.contador -= 1;
+    }
+
+    private static void incrementa(){
+        Pessoa.contador += 1;
     }
 }
 
