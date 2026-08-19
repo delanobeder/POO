@@ -8,7 +8,7 @@ using namespace std;
 
 // construtor
 
-Ponto2D::Ponto2D(float x, float y) {
+Ponto2D::Ponto2D(double x, double y) {
     this->x = x;
     this->y = y;
 }
@@ -20,35 +20,35 @@ Ponto2D::~Ponto2D() {
 
 // Métodos getters and setters
 
-float Ponto2D::getX() const {
+double Ponto2D::getX() const {
     return this->x;
 }
 
-void Ponto2D::setX (float x) {
+void Ponto2D::setX (double x) {
     this->x = x;
 }
 
-float Ponto2D::getY() const {
+double Ponto2D::getY() const {
     return this->y;
 }
 
-void Ponto2D::setY (float y) {
+void Ponto2D::setY (double y) {
     this->y = y;
 }
 
 // Outros métodos da classe
 
-float Ponto2D::distancia(const Ponto2D p) const {
-    float dx = this->x - p.x;
-    float dy = this->y - p.y;
-    return ((float)sqrt(dx * dx + dy * dy));
+double Ponto2D::distancia(const Ponto2D p) const {
+    double dx = this->x - p.x;
+    double dy = this->y - p.y;
+    return sqrt(dx * dx + dy * dy);
 }
 
-void Ponto2D::moveX(float dx) {
+void Ponto2D::moveX(double dx) {
     this->x += dx;
 }
 
-void Ponto2D::moveY(float dy) {
+void Ponto2D::moveY(double dy) {
     this->y += dy;
 }
 

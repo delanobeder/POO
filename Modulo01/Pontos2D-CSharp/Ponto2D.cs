@@ -4,45 +4,45 @@ public class Ponto2D {
     
     // Atributos da classe
 
-    private float x;
-    private float y;
+    private double x;
+    private double y;
 
-    public Ponto2D(float x, float y) { // Construtor
+    public Ponto2D(double x, double y) { // Construtor
         this.x = x;
         this.y = y;
     }
 
     // Métodos getters and setters
 
-    public float getX() {
+    public double getX() {
         return this.x;
     }
 
-    public void setX(float x) {
+    public void setX(double x) {
         this.x = x;
     }
 
-    public float getY() {
+    public double getY() {
         return this.y;
     }
 
-    public void setY(float y) {
+    public void setY(double y) {
         this.y = y;
     }
 
     // Outros métodos da classe
 
-    public float distancia(Ponto2D p) {
+    public double distancia(Ponto2D p) {
         double dx = x - p.x;
         double dy = y - p.y;
-        return ((float)Math.Sqrt(dx * dx + dy * dy));
+        return Math.Sqrt(dx * dx + dy * dy);
     }
 
-    public void moveX(float dx) {
+    public void moveX(double dx) {
         this.x += dx;
     }
     
-    public void moveY(float dy) {
+    public void moveY(double dy) {
         this.y += dy;
     }
 

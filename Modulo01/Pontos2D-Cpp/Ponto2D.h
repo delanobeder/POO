@@ -3,24 +3,24 @@
 
 class Ponto2D {
 public:
-    Ponto2D(float x, float y); // Construtor
+    Ponto2D(double x, double y); // Construtor
     virtual ~Ponto2D(); // Destrutor
     
     // Métodos getters and setters
 
-    float getX() const;
-    void setX(float);
-    float getY() const;
-    void setY(float);
+    double getX() const;
+    void setX(double);
+    double getY() const;
+    void setY(double);
 
     // Outros métodos da classe
     
-    float distancia(const Ponto2D p) const; 
-    void moveX(float dx);
-    void moveY(float dy);
+    double distancia(const Ponto2D p) const; 
+    void moveX(double dx);
+    void moveY(double dy);
     void imprime();
 private:
-    float x, y; // Atributos da classe
+    double x, y; // Atributos da classe
 };
 
 #endif /* PONTO2D_H */
