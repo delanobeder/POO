@@ -1,5 +1,4 @@
 using System;
-using System.Runtime.CompilerServices;
 
 namespace poo {
     public abstract class Funcionario : IComparable<Funcionario> {

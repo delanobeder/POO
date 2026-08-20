@@ -56,8 +56,7 @@ int main() {
 
     sort(funcionarios.begin(), funcionarios.end(), Funcionario::comparaCPF);
 
-    for (long unsigned int i = 0; i < funcionarios.size(); i++)
-    {
+    for (unsigned int i = 0; i < funcionarios.size(); i++) {
         funcionarios[i]->imprime();
         cout << endl;
     }
@@ -66,9 +65,10 @@ int main() {
 
     sort(funcionarios.begin(), funcionarios.end(), Funcionario::comparaProfissao);
 
-    for (long unsigned int i = 0; i < funcionarios.size(); i++)
-    {
-        funcionarios[i]->imprime();
+    // Construção for each collection
+
+    for (auto f : funcionarios) {
+        f->imprime();
         cout << endl;
     }
 

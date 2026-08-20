@@ -1,12 +1,10 @@
-import java.io.Console;
+import br.ufscar.dc.poo.Enfermeiro;
+import br.ufscar.dc.poo.Funcionario;
+import br.ufscar.dc.poo.Medico;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-
-import br.ufscar.dc.poo.Enfermeiro;
-import br.ufscar.dc.poo.Funcionario;
-import br.ufscar.dc.poo.Medico;
 
 public class Main {
 

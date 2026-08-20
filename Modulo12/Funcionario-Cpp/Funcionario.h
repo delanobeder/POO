@@ -1,5 +1,5 @@
-#ifndef PESSOA_H
-#define PESSOA_H
+#ifndef FUNCIONARIO_H
+#define FUNCIONARIO_H
 
 #include <string>
 #include <iostream>
@@ -24,4 +24,4 @@ namespace poo {
 
 }
 
-#endif /* PESSOA_H */
+#endif /* FUNCIONARIO_H */
