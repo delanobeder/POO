@@ -1,8 +1,8 @@
 using System;
 
-class Program {
+public class Program {
 
-  static void Main(string[] args) {
+  public static void Main(string[] args) {
     
     Ponto2D p1 = new Ponto2D(4, 4);
     Ponto2D p2 = new Ponto2D(7, 8);    

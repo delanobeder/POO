@@ -1,6 +1,6 @@
 using System;
 
-class Program {
+public class Program {
   public static void Main(string[] args) {
     
     Data d1 = new Data(20, 8, 2019);

@@ -1,6 +1,4 @@
-import java.io.Console;
-
-class Main {
+public class Main {
   public static void main(String[] args) {
     ContaCorrente c1 = new ContaCorrente(1000, 1200.50);
     ContaCorrente c2 = new ContaCorrente(2000);

@@ -1,6 +1,6 @@
 using System;
 
-class Program {
+public class Program {
   public static void Main(string[] args) {
     ContaCorrente c1 = new ContaCorrente(1000, 1200.50);
     ContaCorrente c2 = new ContaCorrente(2000);
