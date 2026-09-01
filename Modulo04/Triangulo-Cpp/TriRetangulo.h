@@ -7,7 +7,7 @@ class TriRetangulo : public Triangulo {
 public:
     TriRetangulo(double, double, double);
     ~TriRetangulo();
-    double getArea() const;
+    double getArea() const override;
 private:
 };
 

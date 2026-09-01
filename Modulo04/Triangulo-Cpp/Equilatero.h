@@ -7,7 +7,7 @@ class Equilatero : public Triangulo {
 public:
     Equilatero(double lado);
     ~Equilatero();
-    double getArea() const;
+    double getArea() const override;
 private:
 };
 

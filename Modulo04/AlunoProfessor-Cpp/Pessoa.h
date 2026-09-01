@@ -8,6 +8,7 @@ using namespace std;
 class Pessoa {
 public:
     Pessoa();
+    Pessoa(const Pessoa& p);
     Pessoa(string nome, int idade);
     virtual ~Pessoa();
     string getNome() const;

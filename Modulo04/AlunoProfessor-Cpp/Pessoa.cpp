@@ -8,6 +8,11 @@ Pessoa::Pessoa() {
     cout << "Construtor Pessoa()" << endl;
 }
 
+Pessoa::Pessoa(const Pessoa& p) : nome(p.nome), idade(p.idade) {
+    incrementa();
+    cout << "Construtor Pessoa(p)" << endl;
+}
+
 Pessoa::Pessoa(string nome, int idade) :
 nome(nome), idade(idade) {
     incrementa();

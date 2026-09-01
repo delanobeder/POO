@@ -2,21 +2,41 @@
 #include "Aluno.h"
 #include "Professor.h"
 
+void passagemCopia(Pessoa p) {
+    p.imprime();
+}
+
+void passagemReferencia(Pessoa& p) {
+    p.imprime();
+}
+
+void passagemPonteiro(Pessoa* p) {
+    p->imprime();
+}
+
 int main() {
 
     cout << "---------------------------------------" << endl;
     Pessoa p1("Fulano da Silva", 18);
-    Pessoa* p2 = new Pessoa("Sincrano Andrade", 19);
+    Pessoa p2("Sincrano Andrade", 19);
     Pessoa p3("Beltrano dos Santos", 18);
-    Aluno* a1 = new Aluno("Aluno teste", 18, 927450);
+    Aluno  a1("Aluno teste", 18, 927450);
     Professor prof1("Professor Teste", 42, 5000);
+
+    cout << "---------------------------------------" << endl;
+    passagemCopia(prof1);
+    cout << "---------------------------------------" << endl;
+    passagemReferencia(prof1);
+    cout << "---------------------------------------" << endl;
+    passagemPonteiro(&prof1);
+    cout << "---------------------------------------" << endl;
 
     Pessoa cadastro[5];
 
     cadastro[0] = p1;
-    cadastro[1] = *p2;
+    cadastro[1] = p2;
     cadastro[2] = p3;
-    cadastro[3] = *a1;
+    cadastro[3] = a1;
     cadastro[4] = prof1;
     
     prof1.setIdade(43);
@@ -29,17 +49,6 @@ int main() {
     cadastro[4].imprime();
     
     cout << endl;
-    cout << "---------------------------------------" << endl;
-    cout << endl;    
-
-    cout << "Contador de objetos: " << Pessoa::getContador() << endl;
-
-    cout << endl;
-    cout << "---------------------------------------" << endl;
-
-    delete p2;
-    delete a1;
-
     cout << "---------------------------------------" << endl;
     cout << endl;    
 
