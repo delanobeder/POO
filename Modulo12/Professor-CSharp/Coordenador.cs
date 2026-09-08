@@ -1,22 +1,28 @@
 using System;
 
-namespace poo {
+namespace poo
+{
 
-    class Coordenador : Professor {
+    class Coordenador : Professor
+    {
 
         private string curso;
-        public Coordenador(string nome, int CPF, double salario, string curso) : base(nome, CPF, salario) {
+        public Coordenador(string nome, int CPF, double salario, string curso) : base(nome, CPF, salario)
+        {
             this.curso = curso;
         }
-        public override double getSalario() {
-            return base.getSalario() + 2000;
+        public override double GetSalario()
+        {
+            return base.GetSalario() + 2000;
         }
-        public string getCurso() {
+        public string GetCurso()
+        {
             return curso;
         }
 
-        public override void imprime() {
-            base.imprime();
+        public override void Imprime()
+        {
+            base.Imprime();
             Console.WriteLine("Curso: " + curso);
         }
     }

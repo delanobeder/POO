@@ -1,53 +1,63 @@
 using System;
 
-public class Horario {
+public class Horario
+{
 
-    private int hora; 
-    private int minuto; 
-    
+    private int hora;
+    private int minuto;
+
     private int segundo;
 
-    public Horario() {
+    public Horario()
+    {
         hora = 0;
         minuto = 0;
         segundo = 0;
     }
 
-    public Horario(int hora, int minuto, int segundo) {
-        setHora(hora);
-        setMinuto(minuto);
-        setSegundo(segundo);
+    public Horario(int hora, int minuto, int segundo)
+    {
+        SetHora(hora);
+        SetMinuto(minuto);
+        SetSegundo(segundo);
     }
 
-    // Métodos set
+    // Métodos Set
 
-    public void setHora(int hora) {
+    public void SetHora(int hora)
+    {
         this.hora = (hora >= 0 && hora < 24) ? hora : 0;
     }
 
-    public void setMinuto(int minuto) {
+    public void SetMinuto(int minuto)
+    {
         this.minuto = (minuto >= 0 && minuto < 59) ? minuto : 0;
     }
 
-    public void setSegundo(int segundo) {
+    public void SetSegundo(int segundo)
+    {
         this.segundo = (segundo >= 0 && segundo < 24) ? segundo : 0;
     }
 
-    // Métodos get
+    // Métodos Get
 
-    public int getHora() {
+    public int GetHora()
+    {
         return hora;
     }
 
-    public int getMinuto() {
+    public int GetMinuto()
+    {
         return minuto;
     }
 
-    public int getSegundo() {
+    public int GetSegundo()
+    {
         return segundo;
     }
 
-    public void imprime() {
+    public void Imprime()
+    {
         Console.WriteLine("{0:00}:{1:00}:{2:00}", hora, minuto, segundo);
     }
 }

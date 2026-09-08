@@ -1,14 +1,17 @@
-public class TriRetangulo : Triangulo {
+public class TriRetangulo : Triangulo
+{
     /*
      * cateto1 => lado[0]
      * cateto2 => lado[1]
      * hipotenusa => lado[2]
      */
     public TriRetangulo(double cateto1, double cateto2, double hipotenusa) :
-        base(cateto1, cateto2, hipotenusa) {
+        base(cateto1, cateto2, hipotenusa)
+    {
     }
 
-    public override double getArea() {
+    public override double GetArea()
+    {
         /*
          * cateto1 é o lado[0]
          * cateto2 é o lado[1]

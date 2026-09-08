@@ -1,8 +1,10 @@
 using System;
 using poo;
-public class Program {
+public class Program
+{
 
-    public static void Main(string[] args) {
+    public static void Main(string[] args)
+    {
 
         Endereco end1;
         end1 = new Endereco("Rua da Saudade", 10, "São Carlos", "São Paulo");
@@ -14,12 +16,12 @@ public class Program {
 
         Aluno aluno2 = new Aluno("Sincrano", 54321, end2);
 
-        // imprime as informações do aluno1
-        aluno1.imprime();
+        // Imprime as informações do aluno1
+        aluno1.Imprime();
 
-        // imprime as informações do aluno2
+        // Imprime as informações do aluno2
 
-        aluno2.imprime();
+        aluno2.Imprime();
 
         Console.WriteLine();
     }

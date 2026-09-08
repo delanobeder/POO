@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using poo;
 
-class Program {
-    public static void Main(string[] args) {
+class Program
+{
+    public static void Main(string[] args)
+    {
 
         List<Funcionario> funcionarios = new List<Funcionario>();
 
@@ -17,35 +19,42 @@ class Program {
         funcionarios.Add(f3);
         funcionarios.Add(f4);
 
-        for (int i = 0; i < funcionarios.Count; i++) {
-            funcionarios[i].imprime();
+        for (int i = 0; i < funcionarios.Count; i++)
+        {
+            funcionarios[i].Imprime();
             Console.WriteLine();
 
             // Cast f1 para Medico
-             
+
             Console.Write("Cast => Medico     : ");
-            
+
             Medico m1 = funcionarios[i] as Medico;
-            
-            if (m1 != null) {
-                Console.WriteLine("(Cast OK) Especialidade: {0}", m1.getEspecialidade());
-            } else {
-                Console.WriteLine("(Cast not OK)");
+
+            if (m1 != null)
+            {
+                Console.WriteLine("(Cast OK) Especialidade: {0}", m1.GetEspecialidade());
             }
-            
-            // Cast para Enfermeiro
-            
-            Console.Write("Cast => Enfermeiro : ");
-            
-            Enfermeiro e1 = funcionarios[i] as Enfermeiro;
-            
-            if (e1 != null) {
-                Console.WriteLine("(Cast OK) CRE: {0}", e1.getCRE());
-            } else {
+            else
+            {
                 Console.WriteLine("(Cast not OK)");
             }
 
-            Console.WriteLine();            
+            // Cast para Enfermeiro
+
+            Console.Write("Cast => Enfermeiro : ");
+
+            Enfermeiro e1 = funcionarios[i] as Enfermeiro;
+
+            if (e1 != null)
+            {
+                Console.WriteLine("(Cast OK) CRE: {0}", e1.GetCRE());
+            }
+            else
+            {
+                Console.WriteLine("(Cast not OK)");
+            }
+
+            Console.WriteLine();
         }
 
         Console.WriteLine("=========================================");
@@ -56,7 +65,7 @@ class Program {
 
         for (int i = 0; i < funcionarios.Count; i++)
         {
-            funcionarios[i].imprime();
+            funcionarios[i].Imprime();
             Console.WriteLine();
         }
 
@@ -69,7 +78,7 @@ class Program {
 
         foreach (Funcionario f in funcionarios)
         {
-            f.imprime();
+            f.Imprime();
             Console.WriteLine();
         }
     }

@@ -1,27 +1,29 @@
 using System;
 using poo;
 
-public class Program {
+public class Program
+{
 
-    public static void Main(string[] args) {
+    public static void Main(string[] args)
+    {
 
         Universidade ufscar = new Universidade("UFSCar");
 
         Console.WriteLine("-------------------------------");
 
-        ufscar.adicionaDepartamento("Computação", "DC");
-        ufscar.adicionaDepartamento("Matemática", "DM");
-        ufscar.adicionaDepartamento("Física", "DF");
+        ufscar.AdicionaDepartamento("Computação", "DC");
+        ufscar.AdicionaDepartamento("Matemática", "DM");
+        ufscar.AdicionaDepartamento("Física", "DF");
 
         Console.WriteLine("-------------------------------");
 
-        ufscar.imprime();
+        ufscar.Imprime();
 
-        ufscar.removeDepartamento("DM");
+        ufscar.RemoveDepartamento("DM");
 
         Console.WriteLine("-------------------------------");
 
-        ufscar.imprime();
+        ufscar.Imprime();
 
         Console.WriteLine("-------------------------------");
     }

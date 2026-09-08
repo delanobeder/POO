@@ -1,18 +1,22 @@
 using System;
 
-namespace ns1 {
+namespace ns1
+{
 
-    public class Pessoa {
+    public class Pessoa
+    {
 
         private string nome;
         private int idade;
 
-        public Pessoa(string nome, int idade) {
+        public Pessoa(string nome, int idade)
+        {
             this.nome = nome;
             this.idade = idade;
         }
 
-        public void imprime() {
+        public void Imprime()
+        {
             Console.WriteLine("Nome: {0}", nome);
             Console.WriteLine("Idade: {0}", idade);
         }

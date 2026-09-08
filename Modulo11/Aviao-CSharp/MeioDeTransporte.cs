@@ -1,9 +1,11 @@
 
-namespace poo {
+namespace poo
+{
 
-    public interface MeioDeTransporte {
-        void subir();
-        void descer();
+    public interface MeioDeTransporte
+    {
+        void Subir();
+        void Descer();
     }
-    
+
 }

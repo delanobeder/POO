@@ -1,25 +1,27 @@
 using System;
 using poo;
 
-class Program {
+class Program
+{
 
-  static void Main(string[] args) {
-    
+  static void Main(string[] args)
+  {
+
     Voador v = new Passaro();
-    
-    v.decolar();
-    v.aterissar();
-    
+
+    v.Decolar();
+    v.Aterissar();
+
     MeioDeTransporte m = new Onibus();
-    
-    m.subir();
-    m.descer();
-        
+
+    m.Subir();
+    m.Descer();
+
     Aviao a = new Aviao();
-    
-    a.decolar();
-    a.aterissar();
-    a.subir();
-    a.descer();
+
+    a.Decolar();
+    a.Aterissar();
+    a.Subir();
+    a.Descer();
   }
 }

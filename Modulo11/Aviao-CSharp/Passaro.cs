@@ -1,14 +1,18 @@
 using System;
 
-namespace poo {
+namespace poo
+{
 
-    public class Passaro : Voador {
+    public class Passaro : Voador
+    {
 
-        public void decolar() {
+        public void Decolar()
+        {
             Console.WriteLine("Bate as asas e levanta voo");
         }
 
-        public void aterissar() {
+        public void Aterissar()
+        {
             Console.WriteLine("Fechas as asas");
         }
     }

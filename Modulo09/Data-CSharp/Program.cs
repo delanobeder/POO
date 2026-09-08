@@ -1,9 +1,11 @@
 using System;
 using poo;
 
-class Program {
+class Program
+{
 
-  private static Data readData(string text) {
+  private static Data ReadData(string text)
+  {
     Console.Write(text);
     string[] s = Console.ReadLine().Split("/");
     int dd = int.Parse(s[0]);
@@ -11,17 +13,23 @@ class Program {
     int yy = int.Parse(s[2]);
     return new Data(dd, mm, yy);
   }
-  public static void Main(string[] args) {
+  public static void Main(string[] args)
+  {
 
-    Data D1 = readData("1a Data: ");
-    Data D2 = readData("2a Data: ");
+    Data D1 = ReadData("1a Data: ");
+    Data D2 = ReadData("2a Data: ");
 
-    if (D1 > D2) {    
-        Console.WriteLine(D1 + " é mais recente que " + D2);
-    } else if (D1 < D2) {
-        Console.WriteLine(D2 + " é mais recente que " + D1);
-    } else {
-        Console.WriteLine(D1 + " é igual a " + D2);
+    if (D1 > D2)
+    {
+      Console.WriteLine(D1 + " é mais recente que " + D2);
+    }
+    else if (D1 < D2)
+    {
+      Console.WriteLine(D2 + " é mais recente que " + D1);
+    }
+    else
+    {
+      Console.WriteLine(D1 + " é igual a " + D2);
     }
 
     Console.WriteLine(D1 + " > " + D2 + " => " + (D1 > D2));

@@ -1,24 +1,30 @@
 using System;
 
-namespace poo {
-    public class Enfermeiro : Funcionario {
+namespace poo
+{
+    public class Enfermeiro : Funcionario
+    {
 
         private int CRE; // Conselho Regional de Enfermagem
 
-        public Enfermeiro(string CPF, string nome, int CRE) : base(CPF, nome) {
+        public Enfermeiro(string CPF, string nome, int CRE) : base(CPF, nome)
+        {
             this.CRE = CRE;
         }
 
-        public override string getProfissao() {
+        public override string GetProfissao()
+        {
             return "Enfermeiro";
         }
 
-        public int getCRE() {
+        public int GetCRE()
+        {
             return CRE;
         }
 
-        public override void imprime() {
-            base.imprime();
+        public override void Imprime()
+        {
+            base.Imprime();
             Console.WriteLine("CRE: {0}", this.CRE);
         }
     }

@@ -1,29 +1,31 @@
 using System;
 
-public class Program {
+public class Program
+{
 
-  public static void Main(string[] args) {
-    
+  public static void Main(string[] args)
+  {
+
     Triangulo t1 = new Triangulo(2, 3, 4);
     Equilatero e1 = new Equilatero(3);
     TriRetangulo r1 = new TriRetangulo(3, 4, 5);
     int res;
 
-    t1.imprime();
-    
-    Console.WriteLine();
-    
-    e1.imprime();
-    
+    t1.Imprime();
+
     Console.WriteLine();
 
-    r1.imprime();
+    e1.Imprime();
+
+    Console.WriteLine();
+
+    r1.Imprime();
 
     Console.WriteLine();
 
     // Comparando t1 (classe Triangulo) com e1 (classe Equilatero)
-    
-    res = t1.compare(e1);
+
+    res = t1.Compare(e1);
 
     // t1 => classe Triangulo
     // e1 => classe Equilatero (parâmetro do método compare)
@@ -37,8 +39,8 @@ public class Program {
     Console.WriteLine(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
 
     // Comparando e1 (classe Equilatero) com t1 (classe Triangulo)
-    
-    res = e1.compare(t1);
+
+    res = e1.Compare(t1);
 
     // e1 => classe Equilatero
     // t1 => classe Triangulo (parâmetro do método compare)
@@ -51,8 +53,8 @@ public class Program {
     Console.WriteLine(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
 
     // Comparando t1 (classe Triangulo) com t1 (classe Triangulo)
-    
-    res = t1.compare(t1);
+
+    res = t1.Compare(t1);
 
     // t1 => classe Triangulo
     // t1 => classe Triangulo (parâmetro do método compare)
@@ -64,8 +66,8 @@ public class Program {
     Console.WriteLine(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
 
     // Comparando e1 (classe Equilatero) com e1 (classe Equilatero)
-    
-    res = e1.compare(e1);
+
+    res = e1.Compare(e1);
 
     // e1 => classe Equilatero
     // e1 => classe Equilatero (parâmetro do método compare)
@@ -80,8 +82,8 @@ public class Program {
     Console.WriteLine(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
 
     // Comparando r1 (classe TriRetangulo) com r1 (classe TriRetangulo)
-    
-    res = r1.compare(r1);
+
+    res = r1.Compare(r1);
 
     // r1 => classe TriRetangulo
     // r1 => classe TriRetangulo (parâmetro do método compare)
@@ -96,8 +98,8 @@ public class Program {
     Console.WriteLine(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
 
     // Comparando e1 (classe Equilatero) com r1 (classe TriRetangulo)
-    
-    res = e1.compare(r1);
+
+    res = e1.Compare(r1);
 
     // e1 => classe Equilatero
     // r1 => classe TriRetangulo (parâmetro do método compare)
@@ -112,8 +114,8 @@ public class Program {
     Console.WriteLine(res == 0 ? "Igual" : (res < 0 ? "Menor" : "Maior"));
 
     // Comparando r1 (classe TriRetangulo) com e1 (classe Equilatero)
-    
-    res = r1.compare(e1);
+
+    res = r1.Compare(e1);
 
     // r1 => classe TriRetangulo
     // e1 => classe Equilatero (parâmetro do método compare)

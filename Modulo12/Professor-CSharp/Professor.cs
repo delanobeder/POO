@@ -1,20 +1,25 @@
 using System;
 
-namespace poo {
+namespace poo
+{
 
-    class Professor : Pessoa {
+    class Professor : Pessoa
+    {
 
         private double salario;
-        public Professor(string nome, int CPF, double salario) : base(nome, CPF) {
+        public Professor(string nome, int CPF, double salario) : base(nome, CPF)
+        {
             this.salario = salario;
         }
-        public virtual double getSalario() {
+        public virtual double GetSalario()
+        {
             return salario;
         }
 
-        public override void imprime() {
-            base.imprime();
-            Console.WriteLine("Salário: " + this.getSalario());
+        public override void Imprime()
+        {
+            base.Imprime();
+            Console.WriteLine("Salário: " + this.GetSalario());
         }
     }
 

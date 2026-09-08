@@ -1,15 +1,19 @@
-namespace poo {
-    
-    public class Complexo {
+namespace poo
+{
+
+    public class Complexo
+    {
         private double real;
         private double imaginaria;
 
-        public Complexo(double real, double imaginaria) {
+        public Complexo(double real, double imaginaria)
+        {
             this.real = real;
             this.imaginaria = imaginaria;
         }
 
-        public override string ToString() {
+        public override string ToString()
+        {
             bool flag = this.imaginaria >= 0;
             string op = (flag ? " + " : " - ");
             double img = (flag ? this.imaginaria : -this.imaginaria);
@@ -19,17 +23,20 @@ namespace poo {
 
         // operadores aritméticos binários
 
-        public static Complexo operator +(Complexo c1, Complexo c2) {
+        public static Complexo operator +(Complexo c1, Complexo c2)
+        {
             double r = c1.real + c2.real;
             double i = c1.imaginaria + c2.imaginaria;
             return new Complexo(r, i);
         }
 
-        public static Complexo operator -(Complexo c1, Complexo c2) {
+        public static Complexo operator -(Complexo c1, Complexo c2)
+        {
             return c1 + -c2;
         }
 
-        public static Complexo operator *(Complexo c1, Complexo c2) {
+        public static Complexo operator *(Complexo c1, Complexo c2)
+        {
             double a = c1.real;
             double b = c1.imaginaria;
             double c = c2.real;
@@ -41,7 +48,8 @@ namespace poo {
             return new Complexo(r, i);
         }
 
-        public static Complexo operator /(Complexo c1, Complexo c2) {
+        public static Complexo operator /(Complexo c1, Complexo c2)
+        {
             double a = c1.real;
             double b = c1.imaginaria;
             double c = c2.real;
@@ -55,9 +63,9 @@ namespace poo {
 
         // operador aritméticos unários
 
-        public static Complexo operator -(Complexo c1) {
+        public static Complexo operator -(Complexo c1)
+        {
             return new Complexo(-c1.real, -c1.imaginaria);
         }
     }
-
 }

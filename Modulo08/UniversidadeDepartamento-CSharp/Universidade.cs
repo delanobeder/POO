@@ -1,14 +1,17 @@
 using System;
 
-namespace poo {
-    public class Universidade {
+namespace poo
+{
+    public class Universidade
+    {
 
         private string nome;
         private Departamento[] departamentos;
         private int qtde;
         private int max;
 
-        public Universidade(string nome) {
+        public Universidade(string nome)
+        {
             Console.WriteLine("[Construindo " + nome + "]");
             this.nome = nome;
             this.qtde = 0;
@@ -16,15 +19,18 @@ namespace poo {
             departamentos = new Departamento[max];
         }
 
-        public string getNome() {
+        public string GetNome()
+        {
             return this.nome;
         }
 
-        public void setNome(string nome) {
+        public void SetNome(string nome)
+        {
             this.nome = nome;
         }
 
-        private void realoca(int tam) {
+        private void Realoca(int tam)
+        {
 
             // cria um novo array com mudança no tamanho do array
 
@@ -32,53 +38,65 @@ namespace poo {
 
             Departamento[] aux = new Departamento[max];
 
-            for (int i = 0; i < qtde; i++) {
+            for (int i = 0; i < qtde; i++)
+            {
                 aux[i] = departamentos[i];
             }
 
             departamentos = aux;
         }
 
-        public void adicionaDepartamento(string nome, string sigla) {
-            if (qtde == max) {
-                realoca(max + 5);
+        public void AdicionaDepartamento(string nome, string sigla)
+        {
+            if (qtde == max)
+            {
+                Realoca(max + 5);
             }
             departamentos[qtde++] = new Departamento(nome, sigla, this);
         }
 
-        public void removeDepartamento(string sigla) {
+        public void RemoveDepartamento(string sigla)
+        {
             bool found = false;
             int i = 0;
 
-            while (i < qtde && !found) {
-                if (departamentos[i].getSigla() == sigla) {
+            while (i < qtde && !found)
+            {
+                if (departamentos[i].GetSigla() == sigla)
+                {
                     found = true;
                 }
-                else {
+                else
+                {
                     i++;
                 }
             }
 
-            if (found) {
+            if (found)
+            {
                 departamentos[i] = null;
 
-                while (i < qtde) {
+                while (i < qtde)
+                {
                     departamentos[i] = departamentos[i + 1];
                     i++;
                 }
 
                 qtde = qtde - 1;
 
-                if (qtde == max - 5) {
-                    realoca(max - 5);
+                if (qtde == max - 5)
+                {
+                    Realoca(max - 5);
                 }
             }
         }
 
-        public void imprime() {
+        public void Imprime()
+        {
             Console.WriteLine("Departamentos da " + nome);
-            for (int i = 0; i < qtde; i++) {
-                departamentos[i].imprime();
+            for (int i = 0; i < qtde; i++)
+            {
+                departamentos[i].Imprime();
             }
         }
     }

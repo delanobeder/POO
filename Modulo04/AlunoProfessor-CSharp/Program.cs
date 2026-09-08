@@ -1,8 +1,10 @@
 using System;
 
-class Program {
+class Program
+{
 
-  private static void RunExample() {
+  private static void RunExample()
+  {
 
     Console.WriteLine("---------------------------------------");
     Pessoa p1 = new Pessoa("Fulano da Silva", 18);
@@ -20,24 +22,25 @@ class Program {
     cadastro[3] = a1;
     cadastro[4] = prof1;
 
-    prof1.setIdade(43);
-    
-    Console.WriteLine();
-
-    prof1.imprime();
-    Console.WriteLine();
-    cadastro[4].imprime();
+    prof1.SetIdade(43);
 
     Console.WriteLine();
-    Console.WriteLine("---------------------------------------");
-    Console.WriteLine();
 
-    Console.WriteLine("Contador de objetos: " + Pessoa.getContador());
+    prof1.Imprime();
+    Console.WriteLine();
+    cadastro[4].Imprime();
 
     Console.WriteLine();
     Console.WriteLine("---------------------------------------");
+    Console.WriteLine();
 
-    for (int i = 0; i < 5; i++) {
+    Console.WriteLine("Contador de objetos: " + Pessoa.GetContador());
+
+    Console.WriteLine();
+    Console.WriteLine("---------------------------------------");
+
+    for (int i = 0; i < 5; i++)
+    {
       cadastro[i] = null;
     }
 
@@ -48,14 +51,16 @@ class Program {
     prof1 = null;
   }
 
-  public static void Main(string[] args) {
-    
+  public static void Main(string[] args)
+  {
+
     RunExample();
 
-    while (Pessoa.getContador() > 0) {
+    while (Pessoa.GetContador() > 0)
+    {
       // Force immediate garbage collection across all generations
       GC.Collect();
-      
+
       // Block the current thread until all finalizer queues are empty
       GC.WaitForPendingFinalizers();
     }
@@ -63,7 +68,7 @@ class Program {
     Console.WriteLine("---------------------------------------");
     Console.WriteLine();
 
-    Console.WriteLine("Contador de objetos: " + Pessoa.getContador());
+    Console.WriteLine("Contador de objetos: " + Pessoa.GetContador());
 
     Console.WriteLine();
     Console.WriteLine("---------------------------------------");

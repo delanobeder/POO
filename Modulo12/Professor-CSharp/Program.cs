@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using poo;
 
-class Program {
+class Program
+{
 
-    public static void Main(string[] args) {
+    public static void Main(string[] args)
+    {
 
         List<Pessoa> pessoas = new List<Pessoa>();
 
@@ -20,8 +22,9 @@ class Program {
         pessoas.Add(p2);
         pessoas.Add(p3);
 
-        for (int i = 0; i < pessoas.Count; i++) {
-            pessoas[i].imprime();
+        for (int i = 0; i < pessoas.Count; i++)
+        {
+            pessoas[i].Imprime();
             Console.WriteLine();
         }
 
@@ -31,8 +34,9 @@ class Program {
         pessoas.Sort();
 
 
-        foreach (Pessoa p in pessoas) {
-            p.imprime();
+        foreach (Pessoa p in pessoas)
+        {
+            p.Imprime();
             Console.WriteLine();
         }
     }

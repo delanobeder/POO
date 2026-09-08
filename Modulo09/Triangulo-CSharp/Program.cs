@@ -1,19 +1,21 @@
 using System;
 using poo;
 
-class Program {
+class Program
+{
 
-  public static void Main(string[] args) {
+  public static void Main(string[] args)
+  {
 
-    Triangulo t1 = new Triangulo(5,4,3);
+    Triangulo t1 = new Triangulo(5, 4, 3);
     Triangulo t2 = new Equilatero(3);
-    Triangulo t3 = new Retangulo(3,4,5);
+    Triangulo t3 = new Retangulo(3, 4, 5);
 
-    t1.imprime();
+    t1.Imprime();
     Console.WriteLine();
-    t2.imprime();
+    t2.Imprime();
     Console.WriteLine();
-    t3.imprime();
+    t3.Imprime();
     Console.WriteLine();
 
     Console.WriteLine("t1 > t2 " + (t1 > t2));
