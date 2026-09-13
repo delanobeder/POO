@@ -28,7 +28,7 @@ class Program
 
             Console.Write("Cast => Medico     : ");
 
-            Medico m1 = funcionarios[i] as Medico;
+            Medico? m1 = funcionarios[i] as Medico;
 
             if (m1 != null)
             {
@@ -43,7 +43,7 @@ class Program
 
             Console.Write("Cast => Enfermeiro : ");
 
-            Enfermeiro e1 = funcionarios[i] as Enfermeiro;
+            Enfermeiro? e1 = funcionarios[i] as Enfermeiro;
 
             if (e1 != null)
             {

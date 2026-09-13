@@ -1,19 +1,16 @@
-namespace poo
+namespace poo;
+
+public class Pessoa
 {
+    private string nome;
 
-    public class Pessoa
+    public Pessoa(string nome)
     {
-        private string nome;
-
-        public Pessoa(string nome)
-        {
-            this.nome = nome;
-        }
-
-        public override string ToString()
-        {
-            return this.nome;
-        }
+        this.nome = nome;
     }
 
+    public override string ToString()
+    {
+        return this.nome;
+    }
 }

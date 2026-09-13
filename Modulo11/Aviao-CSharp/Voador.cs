@@ -1,10 +1,9 @@
 
-namespace poo
-{
+namespace poo;
 
-    public interface Voador
-    {
-        void Decolar();
-        void Aterissar();
-    }
+public interface Voador
+{
+    void Decolar();
+    void Aterissar();
 }
+

@@ -1,19 +1,16 @@
 using System;
 
-namespace poo
+namespace poo;
+
+public class Equilatero : Triangulo
 {
 
-    public class Equilatero : Triangulo
+    public Equilatero(double lado) : base(lado, lado, lado)
     {
-
-        public Equilatero(double lado) : base(lado, lado, lado)
-        {
-        }
-
-        public override double GetArea()
-        {
-            return lado1 * lado1 * Math.Sqrt(3) / 4;
-        }
     }
 
+    public override double GetArea()
+    {
+        return lado1 * lado1 * Math.Sqrt(3) / 4;
+    }
 }

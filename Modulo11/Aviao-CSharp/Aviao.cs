@@ -1,29 +1,27 @@
 using System;
 
-namespace poo
+namespace poo;
+
+public class Aviao : Voador, MeioDeTransporte
 {
-
-    public class Aviao : Voador, MeioDeTransporte
+    public void Decolar()
     {
-        public void Decolar()
-        {
-            Console.WriteLine("Liga as turbinas e levanta voo");
-        }
+        Console.WriteLine("Liga as turbinas e levanta voo");
+    }
 
-        public void Aterissar()
-        {
-            Console.WriteLine("Desce o trem de pouso e freia");
-        }
+    public void Aterissar()
+    {
+        Console.WriteLine("Desce o trem de pouso e freia");
+    }
 
-        public void Subir()
-        {
-            Console.WriteLine("Faz check-in e embarca");
-        }
+    public void Subir()
+    {
+        Console.WriteLine("Faz check-in e embarca");
+    }
 
-        public void Descer()
-        {
-            Console.WriteLine("Desembarca e pega as malas");
-        }
+    public void Descer()
+    {
+        Console.WriteLine("Desembarca e pega as malas");
     }
 }
 

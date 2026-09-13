@@ -1,13 +1,7 @@
-MCS       := mcs
-MONO      := mono
-
-EXECUTABLE  := Program
+DOTNET    := dotnet
 
 all: run
-	@rm -rf $(EXECUTABLE)
+	@rm -rf bin obj
 
-run: $(EXECUTABLE)
-	@$(MONO) $(EXECUTABLE)
-
-$(EXECUTABLE): *.cs
-	@$(MCS) -out:$(EXECUTABLE) *.cs
+run: *.cs
+	@$(DOTNET) run

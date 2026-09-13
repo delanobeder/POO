@@ -1,7 +1,4 @@
-using System;
-using System.Linq;
 using poo;
-using ed;
 
 public class Program
 {
@@ -11,7 +8,7 @@ public class Program
 
         Random rand = new Random();
 
-        Queue<int> q = new Queue<int>(10);
+        ed.Queue<int> q = new ed.Queue<int>(10);
 
         q.Imprime();
 
@@ -51,7 +48,7 @@ public class Program
         Console.WriteLine();
         Console.WriteLine();
 
-        Queue<Pessoa> qp = new Queue<Pessoa>(5);
+        ed.Queue<Pessoa> qp = new ed.Queue<Pessoa>(5);
 
         qp.add(new Pessoa("Pessoa01"));
         qp.Imprime();
@@ -66,7 +63,7 @@ public class Program
 
         while (!qp.empty())
         {
-            Pessoa p = qp.remove();
+            Pessoa? p = qp.remove();
             Console.WriteLine("Removido " + p);
             qp.Imprime();
         }

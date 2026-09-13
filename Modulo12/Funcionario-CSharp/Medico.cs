@@ -1,31 +1,30 @@
 using System;
 
-namespace poo
+namespace poo;
+
+public class Medico : Funcionario
 {
-    public class Medico : Funcionario
+
+    private string especialidade;
+
+    public Medico(string CPF, string nome, string especialidade) : base(CPF, nome)
     {
+        this.especialidade = especialidade;
+    }
 
-        private string especialidade;
+    public override string GetProfissao()
+    {
+        return "Medico";
+    }
 
-        public Medico(string CPF, string nome, string especialidade) : base(CPF, nome)
-        {
-            this.especialidade = especialidade;
-        }
+    public string GetEspecialidade()
+    {
+        return especialidade;
+    }
 
-        public override string GetProfissao()
-        {
-            return "Medico";
-        }
-
-        public string GetEspecialidade()
-        {
-            return especialidade;
-        }
-
-        public override void Imprime()
-        {
-            base.Imprime();
-            Console.WriteLine("Especialidade: {0}", this.especialidade);
-        }
+    public override void Imprime()
+    {
+        base.Imprime();
+        Console.WriteLine("Especialidade: {0}", this.especialidade);
     }
 }

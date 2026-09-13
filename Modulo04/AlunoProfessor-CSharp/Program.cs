@@ -41,14 +41,14 @@ class Program
 
     for (int i = 0; i < 5; i++)
     {
-      cadastro[i] = null;
+      cadastro[i] = null!;
     }
 
-    p1 = null;
-    p2 = null;
-    p3 = null;
-    a1 = null;
-    prof1 = null;
+    p1 = null!;
+    p2 = null!;
+    p3 = null!;
+    a1 = null!;
+    prof1 = null!;
   }
 
   public static void Main(string[] args)

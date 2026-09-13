@@ -7,7 +7,7 @@ class Program
   private static Data ReadData(string text)
   {
     Console.Write(text);
-    string[] s = Console.ReadLine().Split("/");
+    string[] s = Console.ReadLine()!.Split("/");
     int dd = int.Parse(s[0]);
     int mm = int.Parse(s[1]);
     int yy = int.Parse(s[2]);

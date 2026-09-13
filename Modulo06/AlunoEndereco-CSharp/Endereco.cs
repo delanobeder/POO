@@ -1,69 +1,68 @@
 using System;
 
-namespace poo
+namespace poo;
+
+public class Endereco
 {
-    public class Endereco
+
+    private string logradouro;
+    private int numero;
+    private string cidade;
+    private string estado;
+
+    public Endereco(string logradouro, int numero, string cidade, string estado)
     {
+        this.logradouro = logradouro;
+        this.numero = numero;
+        this.cidade = cidade;
+        this.estado = estado;
+    }
 
-        private string logradouro;
-        private int numero;
-        private string cidade;
-        private string estado;
+    public string GetLogradouro()
+    {
+        return this.logradouro;
+    }
 
-        public Endereco(string logradouro, int numero, string cidade, string estado)
-        {
-            this.logradouro = logradouro;
-            this.numero = numero;
-            this.cidade = cidade;
-            this.estado = estado;
-        }
+    public void SetLogradouro(string logradouro)
+    {
+        this.logradouro = logradouro;
+    }
 
-        public string GetLogradouro()
-        {
-            return this.logradouro;
-        }
+    public int GetNumero()
+    {
+        return this.numero;
+    }
 
-        public void SetLogradouro(string logradouro)
-        {
-            this.logradouro = logradouro;
-        }
+    public void SetNumero(int numero)
+    {
+        this.numero = numero;
+    }
 
-        public int GetNumero()
-        {
-            return this.numero;
-        }
+    public string GetCidade()
+    {
+        return this.cidade;
+    }
 
-        public void SetNumero(int numero)
-        {
-            this.numero = numero;
-        }
+    public void SetCidade(string cidade)
+    {
+        this.cidade = cidade;
+    }
 
-        public string GetCidade()
-        {
-            return this.cidade;
-        }
+    public string GetEstado()
+    {
+        return this.estado;
+    }
 
-        public void SetCidade(string cidade)
-        {
-            this.cidade = cidade;
-        }
+    public void SetEstado(string estado)
+    {
+        this.estado = estado;
+    }
 
-        public string GetEstado()
-        {
-            return this.estado;
-        }
-
-        public void SetEstado(string estado)
-        {
-            this.estado = estado;
-        }
-
-        public void Imprime()
-        {
-            Console.WriteLine("Logradouro: " + this.GetLogradouro());
-            Console.WriteLine("Numero: " + this.GetNumero());
-            Console.WriteLine("Cidade: " + this.GetCidade());
-            Console.WriteLine("Estado: " + this.GetEstado());
-        }
+    public void Imprime()
+    {
+        Console.WriteLine("Logradouro: " + this.GetLogradouro());
+        Console.WriteLine("Numero: " + this.GetNumero());
+        Console.WriteLine("Cidade: " + this.GetCidade());
+        Console.WriteLine("Estado: " + this.GetEstado());
     }
 }

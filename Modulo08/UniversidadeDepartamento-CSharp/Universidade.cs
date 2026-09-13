@@ -1,103 +1,102 @@
 using System;
 
-namespace poo
+namespace poo;
+
+public class Universidade
 {
-    public class Universidade
+
+    private string nome;
+    private Departamento[] departamentos;
+    private int qtde;
+    private int max;
+
+    public Universidade(string nome)
+    {
+        Console.WriteLine("[Construindo " + nome + "]");
+        this.nome = nome;
+        this.qtde = 0;
+        this.max = 2;
+        departamentos = new Departamento[max];
+    }
+
+    public string GetNome()
+    {
+        return this.nome;
+    }
+
+    public void SetNome(string nome)
+    {
+        this.nome = nome;
+    }
+
+    private void Realoca(int tam)
     {
 
-        private string nome;
-        private Departamento[] departamentos;
-        private int qtde;
-        private int max;
+        // cria um novo array com mudança no tamanho do array
 
-        public Universidade(string nome)
+        max = tam;
+
+        Departamento[] aux = new Departamento[max];
+
+        for (int i = 0; i < qtde; i++)
         {
-            Console.WriteLine("[Construindo " + nome + "]");
-            this.nome = nome;
-            this.qtde = 0;
-            this.max = 2;
-            departamentos = new Departamento[max];
+            aux[i] = departamentos[i];
         }
 
-        public string GetNome()
+        departamentos = aux;
+    }
+
+    public void AdicionaDepartamento(string nome, string sigla)
+    {
+        if (qtde == max)
         {
-            return this.nome;
+            Realoca(max + 5);
         }
+        departamentos[qtde++] = new Departamento(nome, sigla, this);
+    }
 
-        public void SetNome(string nome)
+    public void RemoveDepartamento(string sigla)
+    {
+        bool found = false;
+        int i = 0;
+
+        while (i < qtde && !found)
         {
-            this.nome = nome;
-        }
-
-        private void Realoca(int tam)
-        {
-
-            // cria um novo array com mudança no tamanho do array
-
-            max = tam;
-
-            Departamento[] aux = new Departamento[max];
-
-            for (int i = 0; i < qtde; i++)
+            if (departamentos[i].GetSigla() == sigla)
             {
-                aux[i] = departamentos[i];
+                found = true;
             }
-
-            departamentos = aux;
-        }
-
-        public void AdicionaDepartamento(string nome, string sigla)
-        {
-            if (qtde == max)
+            else
             {
-                Realoca(max + 5);
-            }
-            departamentos[qtde++] = new Departamento(nome, sigla, this);
-        }
-
-        public void RemoveDepartamento(string sigla)
-        {
-            bool found = false;
-            int i = 0;
-
-            while (i < qtde && !found)
-            {
-                if (departamentos[i].GetSigla() == sigla)
-                {
-                    found = true;
-                }
-                else
-                {
-                    i++;
-                }
-            }
-
-            if (found)
-            {
-                departamentos[i] = null;
-
-                while (i < qtde)
-                {
-                    departamentos[i] = departamentos[i + 1];
-                    i++;
-                }
-
-                qtde = qtde - 1;
-
-                if (qtde == max - 5)
-                {
-                    Realoca(max - 5);
-                }
+                i++;
             }
         }
 
-        public void Imprime()
+        if (found)
         {
-            Console.WriteLine("Departamentos da " + nome);
-            for (int i = 0; i < qtde; i++)
+            departamentos[i] = null!;
+
+            while (i < qtde)
             {
-                departamentos[i].Imprime();
+                departamentos[i] = departamentos[i + 1];
+                i++;
             }
+
+            qtde = qtde - 1;
+
+            if (qtde == max - 5)
+            {
+                Realoca(max - 5);
+            }
+        }
+    }
+
+    public void Imprime()
+    {
+        Console.WriteLine("Departamentos da " + nome);
+        for (int i = 0; i < qtde; i++)
+        {
+            departamentos[i].Imprime();
         }
     }
 }
