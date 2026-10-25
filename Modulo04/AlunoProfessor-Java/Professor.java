@@ -14,6 +14,7 @@ public class Professor extends Pessoa {
         this.salario = salario;
     }
 
+    @Override 
     public void imprime() {
         super.imprime();
         System.out.println("Salário: " + this.salario);

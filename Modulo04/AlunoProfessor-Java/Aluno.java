@@ -14,6 +14,7 @@ public class Aluno extends Pessoa {
         this.RA = RA;
     }
     
+    @Override 
     public void imprime() {
         super.imprime();
         System.out.println("RA: " + this.RA);
