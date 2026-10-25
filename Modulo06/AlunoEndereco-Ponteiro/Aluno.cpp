@@ -48,10 +48,10 @@ namespace poo {
 
     void Aluno::imprime() const {
         cout << "-------------------------------------" << endl;
-        cout << "Nome: " << this->getNome() << endl;
-        cout << "RA: " << this->getRA() << endl;
+        cout << "Nome: " << nome << endl;
+        cout << "RA: " << RA << endl;
         cout << "<Endereco>" << endl;
-        this->getEndereco()->imprime();
+        endereco->imprime();
     }
 
 }
