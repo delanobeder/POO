@@ -83,13 +83,13 @@ public class Data
         dia++;
         if (dia > maxNroDias)
         {
-            dia -= maxNroDias;
+            dia = 1;
             mes++;
         }
 
         if (mes > 12)
         {
-            mes--;
+            mes = 1;
             ano++;
         }
 

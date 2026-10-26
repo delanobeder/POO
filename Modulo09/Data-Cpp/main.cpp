@@ -21,9 +21,13 @@ int main() {
     } 
     
     cout << D1++ << endl;
+    cout << D1 << endl;
     cout << ++D1 << endl;
+    cout << D1 << endl;
+    cout << endl;
     cout << D2++ << endl;
+    cout << D2 << endl;
     cout << ++D2 << endl;
-
+    cout << D2 << endl;
     return 0;
 }

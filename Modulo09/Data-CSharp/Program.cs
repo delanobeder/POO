@@ -40,9 +40,14 @@ class Program
     Console.WriteLine(D1 + " != " + D2 + " => " + (D1 != D2));
 
     Console.WriteLine(D1++);
+    Console.WriteLine(D1);
     Console.WriteLine(++D1);
+    Console.WriteLine(D1);
+    Console.WriteLine();
     Console.WriteLine(D2++);
+    Console.WriteLine(D2);
     Console.WriteLine(++D2);
+    Console.WriteLine(D2);
 
   }
 }

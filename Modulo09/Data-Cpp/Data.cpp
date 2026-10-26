@@ -28,19 +28,19 @@ namespace poo {
 
     bool Data::operator<(const Data &right) const {
         return compare(right) < 0;
-        // se a < b se !(a > b) && (a != b)
-        // return !(*this > right) && (*this != right);
+        // a < b se !(a > b) && !(a == b)
+        // return !(*this > right) && !(*this == right);
     }
 
     bool Data::operator<=(const Data &right) const {
         return compare(right) <= 0;
-        // se a <= b se !(a > b)
+        // a <= b se !(a > b)
         // return !(*this > right);
     }
 
     bool Data::operator!=(const Data &right) const {
         return compare(right) != 0;
-        // se a != b se !(a == b)
+        // a != b se !(a == b)
         // return !(*this == right);
     }
 
@@ -67,12 +67,12 @@ namespace poo {
 
         this->dia++;
         if (this->dia > maxNroDias) {
-            this->dia -= maxNroDias;
+            this->dia = 1;
             this->mes++;
         }
 
         if (this->mes > 12) {
-            this->mes--;
+            this->mes = 1;
             this->ano++;
         }
     }
@@ -105,5 +105,4 @@ namespace poo {
         is >> obj.dia >> c >> obj.mes >> c >> obj.ano;
         return is;
     }
-
 }
