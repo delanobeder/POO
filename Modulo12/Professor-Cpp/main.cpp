@@ -39,6 +39,15 @@ int main() {
 
     cout << "----------------------------- " << endl << endl;
 
+    sort(pessoas.begin(), pessoas.end(), Pessoa::comparaCPF);
+
+    for (long unsigned int i = 0; i < pessoas.size(); i++) {
+        pessoas[i]->imprime();
+        cout << endl;
+    }
+
+    cout << "----------------------------- " << endl << endl;
+
     delete p1;
     delete p2;
     delete p3;

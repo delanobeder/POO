@@ -17,6 +17,7 @@ namespace poo {
         virtual void imprime() const;
 
         bool static comparaNome(Pessoa *p1, Pessoa *p2);
+        bool static comparaCPF(Pessoa *p1, Pessoa *p2);
     private:
         string nome;
         int CPF;

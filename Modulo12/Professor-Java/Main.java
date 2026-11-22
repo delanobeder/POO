@@ -1,12 +1,19 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 import br.ufscar.dc.poo.Coordenador;
 import br.ufscar.dc.poo.Pessoa;
 import br.ufscar.dc.poo.Professor;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
-class Main {
+class SortByCPF implements Comparator<Pessoa> {
+    @Override 
+    public int compare(Pessoa p1, Pessoa p2) {
+        return p1.getCPF() - p2.getCPF();
+    }
+}
+
+public class Main {
 
     public static void main(String[] args) {
 
@@ -39,5 +46,16 @@ class Main {
             p.imprime();
             System.out.println();
         }
+
+        System.out.println("----------------------------- ");
+        System.out.println();
+
+        Collections.sort(pessoas, new SortByCPF());
+
+        for (Pessoa p : pessoas) {
+            p.imprime();
+            System.out.println();
+        }
+
     }
 }

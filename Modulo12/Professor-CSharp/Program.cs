@@ -31,13 +31,24 @@ class Program
         Console.WriteLine("----------------------------- ");
         Console.WriteLine();
 
-        pessoas.Sort();
-
+        pessoas.Sort(); // Pessoa.CompareTo
 
         foreach (Pessoa p in pessoas)
         {
             p.Imprime();
             Console.WriteLine();
         }
+
+        Console.WriteLine("----------------------------- ");
+        Console.WriteLine();
+
+        pessoas.Sort(Pessoa.CompareCPF);
+
+        foreach (Pessoa p in pessoas)
+        {
+            p.Imprime();
+            Console.WriteLine();
+        }
+        
     }
 }

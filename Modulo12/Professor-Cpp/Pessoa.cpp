@@ -36,5 +36,10 @@ namespace poo {
     bool Pessoa::comparaNome(Pessoa *p1, Pessoa *p2) {
         return p1->nome < p2->nome;
     }
+
+    bool Pessoa::comparaCPF(Pessoa *p1, Pessoa *p2) {
+        return p1->CPF < p2->CPF;
+    }
+
     
 }

@@ -48,4 +48,9 @@ public class Pessoa : IComparable<Pessoa>
         else
             return this.nome.CompareTo(outro.nome);
     }
+
+    public static int CompareCPF(Pessoa p1, Pessoa p2)
+    {
+        return p1.CPF.CompareTo(p2.CPF);
+    }
 }
